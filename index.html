@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rejouice</title>
+		<!-- Main Style -->
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body class="font-montserrat">
+		<header class="fixed w-full top-0 left-0 right-0 z-999">
+			<nav
+				class="flex justify-between items-center p-5 md:p-7 2xl:px-10 2xl:py-9"
+			>
+				<a href="index.html" class="sm:text-xl text-white"
+					>The Venture Agency.</a
+				>
+				<button id="menu-open" class="text-white cursor-pointer">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-6 sm:size-8"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5"
+						/>
+					</svg>
+				</button>
+				<div
+					id="main-menu"
+					class="absolute overflow-hidden w-full max-h-0 bg-portlandOrange flex flex-wrap gap-3 p-6 pb-2 -top-full left-0 sm:px-8"
+				>
+					<div class="basis-full flex justify-between items-center">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 68 12"
+							class="logo h-4"
+							data-v-62f3805e=""
+						>
+							<path
+								fill="currentColor"
+								d="M32.606 5.931c0-3.353-2.36-5.23-5.074-5.23S22.46 2.598 22.46 5.93c0 3.353 2.36 5.27 5.073 5.27 2.715 0 5.074-1.936 5.074-5.27M0 10.932h1.73v-5.48c0-1.916 1.004-2.95 2.597-2.95h1.062V.854H4.366C2.262.854 0 2.157 0 5.318zm5.731-5c0 3.525 2.321 5.268 5.055 5.268 2.596 0 4.326-1.418 4.68-3.43h-1.77c-.334 1.17-1.278 1.878-2.871 1.878-1.691 0-3.127-.958-3.284-3.161h7.925a6 6 0 0 0 .06-.843c0-2.453-1.515-4.905-4.8-4.943C7.876.662 5.732 2.655 5.732 5.93M7.58 5.03c.256-1.974 1.495-2.778 3.107-2.778 1.495 0 2.793.785 3.01 2.778zm8.308 6.016h1.022c2.105 0 4.366-1.303 4.366-4.464V.969h-1.73v5.48c0 1.916-1.003 2.95-2.596 2.95h-1.062zm8.36-5.097c0-2.567 1.514-3.697 3.284-3.697s3.285 1.13 3.285 3.697c0 2.472-1.515 3.698-3.285 3.698s-3.284-1.226-3.284-3.698m9.49 1.016c0 3.065 2.4 4.234 4.445 4.234s4.444-1.168 4.444-4.234V.969h-1.73v5.652c0 2.223-1.121 3.046-2.714 3.046s-2.714-.823-2.714-3.046V.97h-1.73zm10.27 3.966h1.731V.969h-1.73zm2.71-5c0 3.352 2.321 5.268 5.075 5.268 2.556 0 4.582-1.533 4.779-4.292h-1.75c-.256 1.84-1.495 2.74-3.069 2.74-1.79 0-3.245-1.226-3.245-3.698 0-2.567 1.475-3.697 3.226-3.697 1.553 0 2.851.613 3.087 2.452h1.75C56.376 1.985 54.31.701 51.774.701c-2.714 0-5.054 1.897-5.054 5.23m10.688 0c0 3.525 2.32 5.268 5.054 5.268 2.596 0 4.327-1.418 4.681-3.43h-1.77c-.334 1.17-1.278 1.878-2.871 1.878-1.692 0-3.127-.958-3.285-3.161h7.926a6 6 0 0 0 .059-.843C67.2 3.19 65.686.739 62.401.7c-2.851-.039-4.995 1.954-4.995 5.23m1.849-.901c.255-1.974 1.494-2.778 3.107-2.778 1.495 0 2.793.785 3.009 2.778z"
+							></path>
+						</svg>
+						<button id="menu-close" class="cursor-pointer">
+							close
+						</button>
+					</div>
+					<div
+						class="hidden me-auto sm:basis-1/3 sm:block lg:basis-1/4"
+					>
+						<span
+							id="reel-cursor"
+							class="absolute hidden text-white object-cover pointer-events-none z-20"
+							>Close Reel</span
+						>
+						<video
+							autoplay
+							loop
+							muted
+							src="asset/hero-section.mp4"
+							class="relative rounded-md cursor-pointer z-10"
+						></video>
+						<div class="flex justify-between items-center mt-3">
+							<button
+								id="reel-open"
+								class="flex items-center gap-1 cursor-pointer"
+							>
+								<div class="bg-black p-2 rounded-full">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 24 24"
+										fill="currentColor"
+										class="size-2 fill-white"
+									>
+										<path
+											fill-rule="evenodd"
+											d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+											clip-rule="evenodd"
+										/>
+									</svg>
+								</div>
+								Play Reel
+							</button>
+						</div>
+					</div>
+					<div class="basis-1/2 mb-4">
+						<ul class="flex flex-col items-start gap-1.5">
+							<li class="menu-item current-menu-item">
+								<a href="">Home</a>
+							</li>
+							<li class="menu-item">
+								<a href="">Work</a>
+							</li>
+							<li class="menu-item">
+								<a href="">Services</a>
+							</li>
+							<li class="menu-item">
+								<a href="">About</a>
+							</li>
+							<li class="menu-item">
+								<a href="">Contact</a>
+							</li>
+						</ul>
+						<button
+							class="overflow-hidden relative font-medium mt-4 px-5 py-2.5 border-1 border-black rounded-md hover:text-portlandOrange cursor-pointer z-2 before:content-[''] before:w-full before:absolute before:h-full before:bg-black before:rounded-md before:top-0 before:-left-full hover:before:left-0 before:transition-all before:duration-300 before:-z-1"
+						>
+							Take a seat
+						</button>
+					</div>
+					<div
+						class="basis-full flex justify-center items-center border-t-2 border-t-[#00000033] pt-2.5 md:justify-between"
+					>
+						<p class="hidden md:block">Tommorow's Brand. Today.</p>
+						<div class="flex items-center gap-3.5">
+							<a href="#" class="flex text-lg">
+								x
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									class="size-2"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+									/>
+								</svg>
+							</a>
+							<a href="#" class="flex text-lg">
+								Instagram
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									class="size-2"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+									/>
+								</svg>
+							</a>
+							<a href="#" class="flex text-lg">
+								Linkedin
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									class="size-2"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<section id="hero-section" class="h-screen">
+			<video
+				autoplay
+				loop
+				muted
+				src="asset/hero-section.mp4"
+				class="w-full h-full object-cover"
+			></video>
+			<div class="hero-section-content"></div>
+		</section>
+
+		<!-- GSAP Script -->
+		<script src="js/gsap.min.js"></script>
+		<!-- Main Script -->
+		<script src="js/script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+	--font-montserrat: "Montserrat", sans-serif;
+	--color-portlandOrange: #ff5e38;
+}
+
+#main-menu .menu-item {
+	@apply overflow-hidden text-4xl sm:text-5xl 2xl:text-6xl;
+}
+.menu-item.current-menu-item {
+	@apply border-b-1 border-b-black;
+}
+.menu-item > a {
+	@apply block;
+	--filp-duration: 0.325s;
+	transition: translate var(--filp-duration),
+		transform 0s calc(var(--filp-duration) / 2);
+	transition-timing-function: cubic-bezier(0.66, 0, 0.34, 1);
+}
+.menu-item:hover > a,
+.menu-item:focus > a {
+	translate: 0 -2lh;
+	transform: translateY(2lh);
+}
