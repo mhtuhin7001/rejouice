@@ -49,13 +49,13 @@ $(document).ready(function () {
 
 // Menu Reel
 $(document).ready(function () {
-	const $body = $("body");
 	const $reelCursor = $("#main-menu #menu-reel-cursor");
 	const $menuVideo = $("#main-menu video");
 	$("#reel-open").on("click", function () {
-		$body.addClass("overflow-hidden");
+		$("body").addClass("overflow-hidden");
 		$menuVideo.prop("muted", false);
-		$reelCursor.removeClass("hidden");
+		$menuVideo[0].play();
+		$reelCursor.addClass("lg:block");
 		// Open
 		gsap.to($menuVideo, {
 			x: "-32",
@@ -75,9 +75,10 @@ $(document).ready(function () {
 	});
 	// Close
 	$menuVideo.on("click", function () {
+		$menuVideo[0].pause();
 		$menuVideo.prop("muted", true);
-		$body.removeClass("overflow-hidden");
-		$reelCursor.addClass("hidden");
+		$("body").removeClass("overflow-hidden");
+		$reelCursor.removeClass("lg:block");
 		gsap.to($menuVideo, {
 			x: 0,
 			y: 0,
@@ -93,10 +94,14 @@ $(document).ready(function () {
 	const $heroSec = $("#hero-section");
 	const $heroCursor = $("#hero-play-reel");
 	// Move Cursor
-	$heroSec.on("mousemove", function (e) {
-		$heroCursor.removeClass("hidden");
+	$heroSec.on("mouseenter", function () {
 		gsap.to($heroCursor, {
-			padding: "40px 20px",
+			scale: 1,
+			opacity: 1,
+		});
+	});
+	$heroSec.on("mousemove", function (e) {
+		gsap.to($heroCursor, {
 			x: e.pageX,
 			y: e.pageY,
 			duration: 0.6,
@@ -104,7 +109,10 @@ $(document).ready(function () {
 	});
 	// Hide Cursor
 	$heroSec.on("mouseleave", function () {
-		$heroCursor.addClass("hidden");
+		gsap.to($heroCursor, {
+			scale: 0,
+			opacity: 0,
+		});
 	});
 });
 
@@ -128,9 +136,10 @@ $(document).ready(function () {
 	// Open
 	$("#hero-title, #hero-reel").on("click", function () {
 		$("body").addClass("overflow-hidden");
-		$("#hero-close-reel").removeClass("hidden");
+		$("#hero-close-reel").addClass("lg:block");
 		gsapTl.play();
 		$fullReel.prop("muted", false);
+		$fullReel[0].play();
 	});
 	// Move Cursor
 	$($fullReel).on("mousemove", function (e) {
@@ -141,10 +150,11 @@ $(document).ready(function () {
 	});
 	// Close
 	$($fullReel).on("click", function () {
+		$fullReel[0].pause();
 		$fullReel.prop("muted", true);
 		gsapTl.reverse();
 		$("body").removeClass("overflow-hidden");
-		$("#hero-close-reel").addClass("hidden");
+		$("#hero-close-reel").removeClass("lg:block");
 	});
 });
 

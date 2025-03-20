@@ -1,13 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
-	--font-montserrat: "Montserrat", sans-serif;
+	--font-nbPro: "NB International Pro", sans-serif;
 	--color-portlandOrange: #ff5e38;
+	--sectionGap: clamp(1rem, 5%, 6rem);
 }
 
+header {
+	padding-top: clamp(1.5rem, 2%, 3.5rem);
+}
+#about-us h1 {
+	font-size: clamp(1.5rem, calc(3vw + 1rem), 5.7rem);
+	line-height: clamp(2rem, calc(3vw + 1.5rem), 6.2rem);
+}
+#about-us h2 {
+	font-size: clamp(1rem, calc(1.5vw + 1rem), 3.4rem);
+	line-height: clamp(1.5rem, calc(1.5vw + 1.5rem), 3.9rem);
+}
 #main-menu .menu-item {
-	@apply overflow-hidden text-4xl sm:text-5xl 2xl:text-6xl;
+	@apply overflow-hidden text-4xl font-light sm:text-5xl 2xl:text-6xl;
 }
 .menu-item.current-menu-item {
 	@apply border-b-1 border-b-black;
@@ -23,4 +34,19 @@
 .menu-item:focus > a {
 	translate: 0 -2lh;
 	transform: translateY(2lh);
+}
+
+/** Fonts **/
+@font-face {
+	font-family: "NB International Pro";
+	src: url("../asset/fonts/nb_international_pro_light.woff2") format("woff2");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: "NB International Pro";
+	src: url("../asset/fonts/nb_international_pro_regular.woff2")
+		format("woff2");
+	font-weight: 400;
+	font-style: normal;
 }
