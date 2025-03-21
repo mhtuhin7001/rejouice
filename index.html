@@ -13,10 +13,15 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body class="overflow-x-hidden font-nbPro">
+		<!-- Header -->
 		<header
-			class="fixed w-full text-white flex justify-between items-center px-(--sectionGap) mix-blend-difference inset-0 bottom-auto z-50"
+			class="fixed w-full text-white flex justify-between items-center px-(--sectionGap) pt-[clamp(1.5rem,2%,3.5rem)] mix-blend-difference inset-0 bottom-auto z-50"
 		>
-			<a href="index.html" class="sm:text-xl">The Venture Agency.</a>
+			<a
+				href="index.html"
+				class="text-[clamp(1rem,calc(1vw+0.5rem),2rem)]"
+				>The Venture Agency.</a
+			>
 			<button id="menu-open" class="cursor-pointer">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +29,7 @@
 					viewBox="0 0 24 24"
 					stroke-width="1.5"
 					stroke="currentColor"
-					class="size-6 sm:size-8"
+					class="w-[clamp(1.5rem,calc(1.3vw+1rem),3rem)]"
 				>
 					<path
 						stroke-linecap="round"
@@ -34,16 +39,17 @@
 				</svg>
 			</button>
 		</header>
+		<!-- Nav Menu -->
 		<nav
 			id="main-menu"
-			class="fixed overflow-hidden w-full max-h-0 text-black bg-portlandOrange flex flex-wrap gap-3 p-6 pb-2 -top-full left-0 z-50 sm:px-8"
+			class="fixed overflow-hidden w-full max-h-0 text-black bg-portlandOrange flex flex-wrap gap-3 p-[clamp(1rem,3%,3.5rem)] pb-2 -top-full left-0 z-50 lg:pb-3"
 		>
 			<div class="basis-full flex justify-between items-center">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
 					viewBox="0 0 68 12"
-					class="logo h-4"
+					class="logo w-1/6"
 					data-v-62f3805e=""
 				>
 					<path
@@ -51,7 +57,10 @@
 						d="M32.606 5.931c0-3.353-2.36-5.23-5.074-5.23S22.46 2.598 22.46 5.93c0 3.353 2.36 5.27 5.073 5.27 2.715 0 5.074-1.936 5.074-5.27M0 10.932h1.73v-5.48c0-1.916 1.004-2.95 2.597-2.95h1.062V.854H4.366C2.262.854 0 2.157 0 5.318zm5.731-5c0 3.525 2.321 5.268 5.055 5.268 2.596 0 4.326-1.418 4.68-3.43h-1.77c-.334 1.17-1.278 1.878-2.871 1.878-1.691 0-3.127-.958-3.284-3.161h7.925a6 6 0 0 0 .06-.843c0-2.453-1.515-4.905-4.8-4.943C7.876.662 5.732 2.655 5.732 5.93M7.58 5.03c.256-1.974 1.495-2.778 3.107-2.778 1.495 0 2.793.785 3.01 2.778zm8.308 6.016h1.022c2.105 0 4.366-1.303 4.366-4.464V.969h-1.73v5.48c0 1.916-1.003 2.95-2.596 2.95h-1.062zm8.36-5.097c0-2.567 1.514-3.697 3.284-3.697s3.285 1.13 3.285 3.697c0 2.472-1.515 3.698-3.285 3.698s-3.284-1.226-3.284-3.698m9.49 1.016c0 3.065 2.4 4.234 4.445 4.234s4.444-1.168 4.444-4.234V.969h-1.73v5.652c0 2.223-1.121 3.046-2.714 3.046s-2.714-.823-2.714-3.046V.97h-1.73zm10.27 3.966h1.731V.969h-1.73zm2.71-5c0 3.352 2.321 5.268 5.075 5.268 2.556 0 4.582-1.533 4.779-4.292h-1.75c-.256 1.84-1.495 2.74-3.069 2.74-1.79 0-3.245-1.226-3.245-3.698 0-2.567 1.475-3.697 3.226-3.697 1.553 0 2.851.613 3.087 2.452h1.75C56.376 1.985 54.31.701 51.774.701c-2.714 0-5.054 1.897-5.054 5.23m10.688 0c0 3.525 2.32 5.268 5.054 5.268 2.596 0 4.327-1.418 4.681-3.43h-1.77c-.334 1.17-1.278 1.878-2.871 1.878-1.692 0-3.127-.958-3.285-3.161h7.926a6 6 0 0 0 .059-.843C67.2 3.19 65.686.739 62.401.7c-2.851-.039-4.995 1.954-4.995 5.23m1.849-.901c.255-1.974 1.494-2.778 3.107-2.778 1.495 0 2.793.785 3.009 2.778z"
 					></path>
 				</svg>
-				<button id="menu-close" class="underline cursor-pointer">
+				<button
+					id="menu-close"
+					class="underline cursor-pointer lg:text-xl 2xl:text-3xl"
+				>
 					close
 				</button>
 			</div>
@@ -68,28 +77,26 @@
 					src="asset/hero-section-full.mp4"
 					class="relative rounded-md bg-black cursor-pointer z-10"
 				></video>
-				<div class="flex justify-between items-center mt-3">
-					<button
-						id="reel-open"
-						class="flex items-center gap-1 cursor-pointer"
-					>
-						<div class="bg-black p-2 rounded-full">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="currentColor"
-								class="size-2 fill-white"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-						</div>
-						Play Reel
-					</button>
-				</div>
+				<button
+					id="reel-open"
+					class="flex items-center gap-1 mt-3 cursor-pointer lg:text-xl 2xl:text-3xl"
+				>
+					<div class="bg-black p-2 rounded-full 2xl:p-3">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+							class="size-2 fill-white 2xl:size-4"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+								clip-rule="evenodd"
+							/>
+						</svg>
+					</div>
+					Play Reel
+				</button>
 			</div>
 			<div class="basis-1/2 mb-4">
 				<ul class="flex flex-col items-start gap-1.5">
@@ -110,7 +117,7 @@
 					</li>
 				</ul>
 				<button
-					class="overflow-hidden relative mt-4 px-5 py-2.5 border-1 border-black rounded-md hover:text-portlandOrange cursor-pointer z-2 before:content-[''] before:w-full before:absolute before:h-full before:bg-black before:rounded-md before:top-0 before:-left-full hover:before:left-0 before:transition-all before:duration-300 before:-z-1"
+					class="overflow-hidden relative mt-4 px-5 py-2.5 border-1 border-black rounded-md hover:text-portlandOrange cursor-pointer z-2 before:content-[''] before:w-full before:absolute before:h-full before:bg-black before:rounded-md before:top-0 before:-left-full hover:before:left-0 before:transition-all before:duration-300 before:-z-1 lg:text-xl 2xl:text-3xl lg:px-7 2xl:py-5"
 				>
 					Take a seat
 				</button>
@@ -118,9 +125,14 @@
 			<div
 				class="basis-full flex justify-center items-center border-t-2 border-t-[#00000033] pt-2.5 md:justify-between"
 			>
-				<p class="hidden md:block">Tommorow's Brand. Today.</p>
+				<p class="hidden md:block lg:text-xl 2xl:text-3xl">
+					Tommorow's Brand. Today.
+				</p>
 				<div class="flex items-center gap-3.5">
-					<a href="#" class="flex text-lg font-light">
+					<a
+						href="#"
+						class="flex text-lg font-light lg:text-xl 2xl:text-3xl"
+					>
 						x
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +149,10 @@
 							/>
 						</svg>
 					</a>
-					<a href="#" class="flex text-lg font-light">
+					<a
+						href="#"
+						class="flex text-lg font-light lg:text-xl 2xl:text-3xl"
+					>
 						Instagram
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +169,10 @@
 							/>
 						</svg>
 					</a>
-					<a href="#" class="flex text-lg font-light">
+					<a
+						href="#"
+						class="flex text-lg font-light lg:text-xl 2xl:text-3xl"
+					>
 						Linkedin
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -175,6 +193,7 @@
 			</div>
 		</nav>
 
+		<!-- Hero -->
 		<section id="hero-section" class="h-dvh">
 			<div
 				id="hero-play-reel"
@@ -359,6 +378,7 @@
 			</div>
 		</section>
 
+		<!-- About Us -->
 		<section
 			id="about-us"
 			class="h-dvh font-light text-black bg-white p-(--sectionGap)"
@@ -366,24 +386,37 @@
 			<div
 				class="flex justify-between items-end pb-2.5 border-b-1 border-b-[#00000055] md:pb-4 2xl:pb-6"
 			>
-				<h2>
+				<h2
+					class="text-[clamp(1rem,calc(1.5vw+1rem),3.4rem)] leading-[clamp(1.5rem,calc(1.5vw+1.5rem),3.9rem)]"
+				>
 					Full-service creative agency. <br />
 					Two engagement models.
 				</h2>
-				<h2>Paris & San Diego</h2>
+				<h2
+					class="text-[clamp(1rem,calc(1.5vw+1rem),3.4rem)] leading-[clamp(1.5rem,calc(1.5vw+1.5rem),3.9rem)]"
+				>
+					Paris & San Diego
+				</h2>
 			</div>
-			<h1 class="mt-2.5 md:mt-4 2xl:mt-6">
-				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;We are a digital brand
-				accelerator. We design and develop market-defining brands
-				through award-winning deliverables. Choose full cash
-				compensation or offset up to 50% of our fees for equity in your
-				company. Your vision decision.
+			<h1
+				id="about-describe"
+				class="text-[clamp(1.5rem,calc(3vw+1rem),5.7rem)] leading-[clamp(2rem,calc(3vw+1.5rem),6.2rem)] mt-2.5 md:mt-4 2xl:mt-6"
+			>
+				<span class="w-2.5 h-2"></span>
+				We are a digital brand accelerator. We design and develop
+				market-defining brands through award-winning deliverables.
+				Choose full cash compensation or offset up to 50% of our fees
+				for equity in your company. Your vision decision.
 			</h1>
 		</section>
 		<!-- JQuery Script -->
 		<script src="js/jquery-3.7.1.min.js"></script>
 		<!-- GSAP Script -->
 		<script src="js/gsap.min.js"></script>
+		<!-- ScrollTrigger Script -->
+		<script src="js/ScrollTrigger.min.js"></script>
+		<!-- SplitText Script -->
+		<script src="js/SplitText.min.js"></script>
 		<!-- Main Script -->
 		<script src="js/script.js"></script>
 	</body>

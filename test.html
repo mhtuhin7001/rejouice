@@ -5,48 +5,67 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<style>
-			.st {
-				position: fixed;
-				top: 0;
-				color: #ffff;
-				mix-blend-mode: difference;
+			.text {
+				font-size: 3em;
 			}
-			div {
-				height: 200px;
+
+			.lineParent {
+				overflow: hidden;
+				max-width: max-content;
 			}
-			h1 {
+
+			.mask {
+				overflow: hidden;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="st"><h1>helo world</h1></div>
-		<div style="background-color: black">
-			<p style="color: white">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-				laudantium officiis quos officia illo vero ullam sint, velit at
-				autem.
-			</p>
+		<div>
+			<h2 class="text">
+				We were taken from the ore bed and the mine, We were melted in
+				the furnace and the pit. We were cast and wrought and hammered
+				to design, We were cut and filed and tooled and gauged to fit.
+				Some water, coal, and oil is all we ask, And a thousandth of an
+				inch to give us play: And now, if you will set us to our task,
+				We will serve you four and twenty hours a day
+			</h2>
 		</div>
-		<div style="background-color: white">
-			<p style="color: black">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-				laudantium officiis quos officia illo vero ullam sint, velit at
-				autem.
-			</p>
-		</div>
-		<div style="background-color: black">
-			<p style="color: white">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-				laudantium officiis quos officia illo vero ullam sint, velit at
-				autem.
-			</p>
-		</div>
-		<div style="background-color: white">
-			<p style="color: black">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-				laudantium officiis quos officia illo vero ullam sint, velit at
-				autem.
-			</p>
-		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+		<script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+		<script>
+			gsap.registerPlugin(SplitText);
+
+			let textAnim;
+
+			const doText = () => {
+				textAnim && textAnim.progress(1);
+				const text = new SplitText(".text", {
+					types: "lines",
+					linesClass: "lineChild",
+				});
+				const mask = new SplitText(".text", {
+					types: "lines",
+					linesClass: "lineParent",
+				});
+
+				textAnim = gsap.fromTo(
+					".lineChild",
+					{ yPercent: 200 },
+					{
+						yPercent: 0,
+						duration: 0.5,
+						stagger: 0.1,
+						delay: 0.5,
+						onComplete() {
+							mask.revert(); // make sure we revert in the proper order
+							text.revert();
+						},
+					}
+				);
+			};
+
+			doText();
+			window.addEventListener("resize", doText);
+		</script>
 	</body>
 </html>

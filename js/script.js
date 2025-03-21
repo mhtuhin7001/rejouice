@@ -203,3 +203,37 @@ $(document).ready(function () {
 		}
 	});
 });
+
+// About Us Describe
+$(document).ready(function () {
+	gsap.registerPlugin(SplitText, ScrollTrigger);
+	new SplitText("#about-describe", {
+		type: "lines",
+		linesClass: "lineChild",
+	});
+	new SplitText("#about-describe", {
+		type: "lines",
+		linesClass: "lineParent",
+	});
+	gsap.fromTo(
+		".lineChild",
+		{
+			yPercent: 100,
+			opacity: 0,
+		},
+		{
+			yPercent: 0,
+			opacity: 1,
+			duration: 0.7,
+			stagger: 0.15,
+			ease: "power3.out",
+			scrollTrigger: {
+				trigger: "#about-describe",
+				start: "top 80%",
+				end: "top 20%",
+				scrub: 2,
+				toggleActions: "play none none reverse",
+			},
+		}
+	);
+});
