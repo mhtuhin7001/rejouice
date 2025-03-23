@@ -1,3 +1,13 @@
+// Initialize Lenis
+$(document).ready(function () {
+	const lenis = new Lenis();
+	function raf(time) {
+		lenis.raf(time);
+		requestAnimationFrame(raf);
+	}
+	requestAnimationFrame(raf);
+});
+
 // First View
 $(document).ready(function () {
 	let gsapTl = gsap.timeline();
@@ -24,7 +34,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 	let gsapTl = gsap.timeline();
 	gsapTl.to("#main-menu", {
-		maxHeight: "100vh",
+		maxHeight: "100dvh",
 		top: 0,
 		duration: 0.5,
 	});
@@ -44,48 +54,6 @@ $(document).ready(function () {
 	// Close
 	$("#menu-close").on("click", function () {
 		gsapTl.reverse();
-	});
-});
-
-// Menu Reel
-$(document).ready(function () {
-	const $reelCursor = $("#main-menu #menu-reel-cursor");
-	const $menuVideo = $("#main-menu video");
-	$("#reel-open").on("click", function () {
-		$("body").addClass("overflow-hidden");
-		$menuVideo.prop("muted", false);
-		$menuVideo[0].play();
-		$reelCursor.addClass("lg:block");
-		// Open
-		gsap.to($menuVideo, {
-			x: "-32",
-			y: "-60",
-			minWidth: "100vw",
-			minHeight: "100vh",
-			borderRadius: 0,
-			duration: 0.7,
-		});
-	});
-	// Cursor
-	$menuVideo.on("mousemove", function (e) {
-		gsap.to($reelCursor, {
-			x: e.pageX + 10,
-			y: e.pageY - 15,
-		});
-	});
-	// Close
-	$menuVideo.on("click", function () {
-		$menuVideo[0].pause();
-		$menuVideo.prop("muted", true);
-		$("body").removeClass("overflow-hidden");
-		$reelCursor.removeClass("lg:block");
-		gsap.to($menuVideo, {
-			x: 0,
-			y: 0,
-			minWidth: 0,
-			minHeight: 0,
-			borderRadius: 6,
-		});
 	});
 });
 
@@ -123,8 +91,6 @@ $(document).ready(function () {
 	gsapTl.to($fullReel, {
 		width: "100vw",
 		height: "100vh",
-		top: 0,
-		left: 0,
 		rotate: 0,
 		duration: 0.8,
 	});
@@ -207,20 +173,14 @@ $(document).ready(function () {
 // About Us Describe
 $(document).ready(function () {
 	gsap.registerPlugin(SplitText, ScrollTrigger);
-	new SplitText("#about-describe", {
+	let split = new SplitText("#about-describe", {
 		type: "lines",
 		linesClass: "lineChild",
 	});
-	new SplitText("#about-describe", {
-		type: "lines",
-		linesClass: "lineParent",
-	});
+
 	gsap.fromTo(
-		".lineChild",
-		{
-			yPercent: 100,
-			opacity: 0,
-		},
+		split.lines,
+		{ yPercent: 100, opacity: 0 },
 		{
 			yPercent: 0,
 			opacity: 1,

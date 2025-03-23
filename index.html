@@ -17,11 +17,7 @@
 		<header
 			class="fixed w-full text-white flex justify-between items-center px-(--sectionGap) pt-[clamp(1.5rem,2%,3.5rem)] mix-blend-difference inset-0 bottom-auto z-50"
 		>
-			<a
-				href="index.html"
-				class="text-[clamp(1rem,calc(1vw+0.5rem),2rem)]"
-				>The Venture Agency.</a
-			>
+			<a href="index.html">The Venture Agency.</a>
 			<button id="menu-open" class="cursor-pointer">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -65,11 +61,6 @@
 				</button>
 			</div>
 			<div class="hidden me-auto sm:basis-1/3 md:block lg:basis-1/4">
-				<span
-					id="menu-reel-cursor"
-					class="absolute hidden text-white m-auto mix-blend-difference inset-0 pointer-events-none z-20"
-					>Close Reel</span
-				>
 				<video
 					autoplay
 					loop
@@ -194,7 +185,7 @@
 		</nav>
 
 		<!-- Hero -->
-		<section id="hero-section" class="h-dvh">
+		<section id="hero-section" class="relative h-dvh">
 			<div
 				id="hero-play-reel"
 				class="absolute hidden text-sm font-medium text-white bg-portlandOrange px-5 py-9 rounded-full pointer-events-none scale-0 -translate-1/2 z-20 lg:block"
@@ -381,7 +372,7 @@
 		<!-- About Us -->
 		<section
 			id="about-us"
-			class="h-dvh font-light text-black bg-white p-(--sectionGap)"
+			class="min-h-dvh font-light text-black bg-white p-(--sectionGap)"
 		>
 			<div
 				class="flex justify-between items-end pb-2.5 border-b-1 border-b-[#00000055] md:pb-4 2xl:pb-6"
@@ -398,19 +389,130 @@
 					Paris & San Diego
 				</h2>
 			</div>
-			<h1
-				id="about-describe"
-				class="text-[clamp(1.5rem,calc(3vw+1rem),5.7rem)] leading-[clamp(2rem,calc(3vw+1.5rem),6.2rem)] mt-2.5 md:mt-4 2xl:mt-6"
-			>
-				<span class="w-2.5 h-2"></span>
+			<h1 id="about-describe" class="mt-2.5 md:mt-4 2xl:mt-6">
 				We are a digital brand accelerator. We design and develop
 				market-defining brands through award-winning deliverables.
 				Choose full cash compensation or offset up to 50% of our fees
 				for equity in your company. Your vision decision.
 			</h1>
 		</section>
+
+		<!-- Agency Models -->
+		<section id="agency-models" class="bg-white p-(--sectionGap)">
+			<div
+				class="h-dvh font-light text-center flex flex-col justify-center items-center"
+			>
+				<h6>
+					Agency & Venture
+					<span class="text-white bg-black px-2 py-0.5 rounded-xl"
+						>Models</span
+					>
+				</h6>
+				<h1 class="mt-4">
+					Explore Our services <br />
+					& engagement models
+				</h1>
+			</div>
+			<div class="h-dvh">
+				<div class="flex justify-between items-center">
+					<h5>Highlight</h5>
+					<a href="#" class="see-models relative flex items-center">
+						<span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="size-5 2xl:size-7"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+								/>
+							</svg>
+						</span>
+						<span>See the work</span>
+						<span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="size-5 2xl:size-7"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+								/>
+							</svg>
+						</span>
+					</a>
+				</div>
+				<div
+					class="grid grid-cols-2 gap-3 justify-between md:grid-cols-3"
+				>
+					<div
+						class="relative h-full col-start-1 col-end-3 md:col-end-2"
+					>
+						<img
+							src="asset/model-1-logo.svg"
+							class="absolute h-3 right-1/2 bottom-1/4 left-1/2 -translate-1/2 z-30 sm:h-4 md:bottom-1/5 xl:h-6"
+							alt="Model Logo"
+						/>
+						<img
+							src="asset/model-1.avif"
+							class="relative size-full object-cover z-20"
+							alt="Model Image"
+						/>
+						<video
+							src="asset/model-1.mp4"
+							class="absolute size-full object-cover top-0 z-10"
+						></video>
+					</div>
+					<div class="relative">
+						<img
+							src="asset/model-2-logo.svg"
+							class="absolute h-3 right-1/2 bottom-1/5 left-1/2 -translate-1/2 z-30 sm:h-4 xl:h-6"
+							alt="Model Logo"
+						/>
+						<img
+							src="asset/model-2.avif"
+							class="relative size-full object-cover z-20"
+							alt="Model Image"
+						/>
+						<video
+							src="asset/model-2.mp4"
+							class="absolute size-full object-cover top-0 z-10"
+						></video>
+					</div>
+					<div class="relative">
+						<img
+							src="asset/model-3-logo.svg"
+							class="absolute h-3 right-1/2 bottom-1/5 left-1/2 -translate-1/2 z-30 sm:h-4 xl:h-6"
+							alt="Model Logo"
+						/>
+						<img
+							src="asset/model-3.avif"
+							class="relative size-full object-cover z-20"
+							alt="Model Image"
+						/>
+						<video
+							src="asset/model-3.mp4"
+							class="absolute size-full object-cover top-0 z-10"
+						></video>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<!-- JQuery Script -->
 		<script src="js/jquery-3.7.1.min.js"></script>
+		<!-- Locomotive Script -->
+		<script src="js/lenis.min.js"></script>
 		<!-- GSAP Script -->
 		<script src="js/gsap.min.js"></script>
 		<!-- ScrollTrigger Script -->

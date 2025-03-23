@@ -6,6 +6,34 @@
 	--sectionGap: clamp(1rem, 5%, 6rem);
 }
 
+h1 {
+	@apply text-[clamp(1.5rem,calc(3vw+1rem),5.7rem)] leading-[clamp(2rem,calc(3vw+1.5rem),6.2rem)];
+}
+h5,
+header a,
+.see-models {
+	@apply text-[clamp(1rem,calc(1vw+0.5rem),2rem)];
+}
+h6 {
+	@apply text-[clamp(.9rem,calc(1vw+0.20rem),1.5rem)];
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+	@apply h-auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+	@apply overscroll-contain;
+}
+.lenis.lenis-stopped {
+	@apply overflow-clip;
+}
+.lenis.lenis-smooth iframe {
+	@apply pointer-events-none;
+}
+
+/* Nav Menu */
 #main-menu .menu-item {
 	@apply overflow-hidden font-light text-[clamp(1.5rem,calc(3vw+1rem),5.7rem)] leading-[clamp(1.5rem,calc(3vw+1rem),5.7rem)];
 }
@@ -24,6 +52,8 @@
 	translate: 0 -2lh;
 	transform: translateY(2lh);
 }
+
+/* About Us */
 #about-us .lineParent {
 	@apply relative overflow-hidden max-w-max;
 }
