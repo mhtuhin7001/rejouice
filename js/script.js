@@ -170,30 +170,57 @@ $(document).ready(function () {
 	});
 });
 
-// About Us Describe
+// Line Reveal Animation
 $(document).ready(function () {
 	gsap.registerPlugin(SplitText, ScrollTrigger);
-	let split = new SplitText("#about-describe", {
-		type: "lines",
-		linesClass: "lineChild",
-	});
 
-	gsap.fromTo(
-		split.lines,
-		{ yPercent: 100, opacity: 0 },
-		{
-			yPercent: 0,
-			opacity: 1,
-			duration: 0.7,
-			stagger: 0.15,
-			ease: "power3.out",
-			scrollTrigger: {
-				trigger: "#about-describe",
-				start: "top 80%",
-				end: "top 20%",
-				scrub: 2,
-				toggleActions: "play none none reverse",
-			},
-		}
-	);
+	["#about-describe", "#models-title"].forEach((selector) => {
+		new SplitText(selector, {
+			type: "lines",
+			linesClass: "lineChild",
+		});
+		new SplitText(selector, {
+			type: "lines",
+			linesClass: "lineParent",
+		});
+		gsap.fromTo(
+			`${selector} .lineChild`,
+			{ yPercent: 100, opacity: 0 },
+			{
+				yPercent: 0,
+				opacity: 1,
+				duration: 0.7,
+				stagger: 0.15,
+				ease: "power3.out",
+				scrollTrigger: {
+					trigger: selector,
+					start: "top 80%",
+					end: "top 20%",
+					scrub: 2,
+					toggleActions: "play none none reverse",
+				},
+			}
+		);
+	});
+});
+
+// Agency Models Video
+$(document).ready(function () {
+	// Play from start
+	$("#agency-models .group").on("mouseenter", function () {
+		$(this)
+			.find("video")
+			.each(function () {
+				this.currentTime = 0;
+				this.play();
+			});
+	});
+	// Pause
+	$("#agency-models .group").on("mouseleave", function () {
+		$(this)
+			.find("video")
+			.each(function () {
+				this.pause();
+			});
+	});
 });

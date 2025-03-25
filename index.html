@@ -400,15 +400,19 @@
 		<!-- Agency Models -->
 		<section id="agency-models" class="bg-white p-(--sectionGap)">
 			<div
-				class="h-dvh font-light text-center flex flex-col justify-center items-center"
+				class="h-dvh font-light flex flex-col justify-center items-center"
 			>
 				<h6>
 					Agency & Venture
-					<span class="text-white bg-black px-2 py-0.5 rounded-xl"
+					<span
+						class="text-center text-white bg-black px-2 py-0.5 rounded-xl"
 						>Models</span
 					>
 				</h6>
-				<h1 class="mt-4">
+				<h1
+					id="models-title"
+					class="flex flex-col items-center mt-4 cursor-pointer"
+				>
 					Explore Our services <br />
 					& engagement models
 				</h1>
@@ -416,8 +420,13 @@
 			<div class="h-dvh">
 				<div class="flex justify-between items-center">
 					<h5>Highlight</h5>
-					<a href="#" class="see-models relative flex items-center">
-						<span>
+					<a
+						href="#"
+						class="see-models group relative flex items-center"
+					>
+						<span
+							class="-translate-x-full translate-y-full opacity-0 transition-all duration-500 group-hover:translate-x-full group-hover:translate-y-0 group-hover:opacity-100"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
@@ -433,8 +442,13 @@
 								/>
 							</svg>
 						</span>
-						<span>See the work</span>
-						<span>
+						<span
+							class="transition-all duration-500 group-hover:translate-x-5"
+							>See the work</span
+						>
+						<span
+							class="transition-all duration-500 group-hover:translate-x-full group-hover:-translate-y-full group-hover:opacity-0"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
@@ -453,56 +467,71 @@
 					</a>
 				</div>
 				<div
-					class="grid grid-cols-2 gap-3 justify-between md:grid-cols-3"
+					class="h-full grid grid-cols-2 gap-3 lg:grid-cols-3 2xl:gap-5"
 				>
 					<div
-						class="relative h-full col-start-1 col-end-3 md:col-end-2"
+						class="group relative col-start-1 col-end-3 lg:col-end-2"
 					>
 						<img
 							src="asset/model-1-logo.svg"
-							class="absolute h-3 right-1/2 bottom-1/4 left-1/2 -translate-1/2 z-30 sm:h-4 md:bottom-1/5 xl:h-6"
+							class="absolute h-3 right-1/2 bottom-1/4 left-1/2 -translate-1/2 z-10 transition-opacity duration-300 group-hover:opacity-0 sm:h-4 md:bottom-1/5 xl:h-6"
 							alt="Model Logo"
+							loading="lazy"
 						/>
 						<img
 							src="asset/model-1.avif"
-							class="relative size-full object-cover z-20"
+							class="absolute size-full object-cover transition-opacity duration-300 group-hover:opacity-0"
 							alt="Model Image"
+							loading="lazy"
 						/>
 						<video
+							muted
+							loop
+							paused
 							src="asset/model-1.mp4"
-							class="absolute size-full object-cover top-0 z-10"
+							class="size-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 						></video>
 					</div>
-					<div class="relative">
+					<div class="group relative">
 						<img
 							src="asset/model-2-logo.svg"
-							class="absolute h-3 right-1/2 bottom-1/5 left-1/2 -translate-1/2 z-30 sm:h-4 xl:h-6"
+							class="absolute h-3 right-1/2 bottom-1/4 left-1/2 -translate-1/2 z-10 transition-opacity duration-300 group-hover:opacity-0 sm:h-4 md:bottom-1/5 xl:h-6"
 							alt="Model Logo"
+							loading="lazy"
 						/>
 						<img
 							src="asset/model-2.avif"
-							class="relative size-full object-cover z-20"
+							class="absolute size-full object-cover transition-opacity duration-300 group-hover:opacity-0"
 							alt="Model Image"
+							loading="lazy"
 						/>
 						<video
+							muted
+							loop
+							paused
 							src="asset/model-2.mp4"
-							class="absolute size-full object-cover top-0 z-10"
+							class="size-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 						></video>
 					</div>
-					<div class="relative">
+					<div class="group relative">
 						<img
 							src="asset/model-3-logo.svg"
-							class="absolute h-3 right-1/2 bottom-1/5 left-1/2 -translate-1/2 z-30 sm:h-4 xl:h-6"
+							class="absolute h-3 right-1/2 bottom-1/4 left-1/2 -translate-1/2 z-10 transition-opacity duration-300 group-hover:opacity-0 sm:h-4 md:bottom-1/5 xl:h-6"
 							alt="Model Logo"
+							loading="lazy"
 						/>
 						<img
 							src="asset/model-3.avif"
-							class="relative size-full object-cover z-20"
+							class="absolute size-full object-cover transition-opacity duration-300 group-hover:opacity-0"
 							alt="Model Image"
+							loading="lazy"
 						/>
 						<video
+							muted
+							loop
+							paused
 							src="asset/model-3.mp4"
-							class="absolute size-full object-cover top-0 z-10"
+							class="size-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 						></video>
 					</div>
 				</div>
