@@ -14,7 +14,8 @@ header a,
 .see-models {
 	@apply text-[clamp(1rem,calc(1vw+0.5rem),2rem)];
 }
-h6 {
+h6,
+p {
 	@apply text-[clamp(.9rem,calc(1vw+0.20rem),1.5rem)];
 }
 
@@ -63,7 +64,6 @@ html.lenis body {
 	text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white,
 		2px 2px 0 white;
 }
-
 #agency-models .lineChild::before,
 #agency-models .lineChild::after {
 	@apply content-[""] absolute w-full  h-[3px] left-0 bg-black bottom-1 transition-all duration-600 ease-[cubic-bezier(0.16,1,0.3,1)] -z-10;

@@ -174,53 +174,89 @@ $(document).ready(function () {
 $(document).ready(function () {
 	gsap.registerPlugin(SplitText, ScrollTrigger);
 
-	["#about-describe", "#models-title"].forEach((selector) => {
-		new SplitText(selector, {
-			type: "lines",
-			linesClass: "lineChild",
-		});
-		new SplitText(selector, {
-			type: "lines",
-			linesClass: "lineParent",
-		});
-		gsap.fromTo(
-			`${selector} .lineChild`,
-			{ yPercent: 100, opacity: 0 },
-			{
-				yPercent: 0,
-				opacity: 1,
-				duration: 0.7,
-				stagger: 0.15,
-				ease: "power3.out",
-				scrollTrigger: {
-					trigger: selector,
-					start: "top 80%",
-					end: "top 20%",
-					scrub: 2,
-					toggleActions: "play none none reverse",
-				},
-			}
-		);
-	});
+	["#about-describe", "#models-title", "#approach-description"].forEach(
+		(selector) => {
+			new SplitText(selector, {
+				type: "lines",
+				linesClass: "lineChild",
+			});
+			new SplitText(selector, {
+				type: "lines",
+				linesClass: "lineParent",
+			});
+			gsap.fromTo(
+				`${selector} .lineChild`,
+				{ yPercent: 100, opacity: 0 },
+				{
+					yPercent: 0,
+					opacity: 1,
+					duration: 0.7,
+					stagger: 0.15,
+					ease: "power3.out",
+					scrollTrigger: {
+						trigger: selector,
+						start: "top 80%",
+						end: "top 20%",
+						scrub: 2,
+						toggleActions: "play none none reverse",
+					},
+				}
+			);
+		}
+	);
 });
 
 // Agency Models Video
 $(document).ready(function () {
 	// Play from start
-	$("#agency-models .group").on("mouseenter", function () {
-		$(this)
-			.find("video")
-			.each(function () {
-				this.currentTime = 0;
-				this.play();
-			});
-	});
+	$("#agency-models .group, #work-glance .swiper-slide").on(
+		"mouseenter",
+		function () {
+			$(this)
+				.find("video")
+				.each(function () {
+					this.currentTime = 0;
+					this.play();
+				});
+		}
+	);
 	// Pause
-	$("#agency-models .group").on("mouseleave", function () {
-		$(this)
-			.find("video")
-			.each(function () {
-				this.pause();
-			});
+	$("#agency-models .group, #work-glance .swiper-slide").on(
+		"mouseleave",
+		function () {
+			$(this)
+				.find("video")
+				.each(function () {
+					this.pause();
+				});
+		}
+	);
+});
+
+// Agency Model Logos
+$(document).ready(function () {
+	// Duplicate Logo
+	const $wrapper = $("#agency-model-logos .logos");
+	const $logos = $wrapper.children().clone();
+	let totalWidth = 0;
+	const screenWidth = $(window).width();
+	while (totalWidth < screenWidth) {
+		$logos.each(function () {
+			if (totalWidth < screenWidth) {
+				const $clone = $(this).clone();
+				$wrapper.append($clone);
+				totalWidth += $clone.outerWidth(true);
+			}
+		});
+	}
+
+	// Logos Animation
+	gsap.to("#agency-model-logos .logos img", {
+		x: -500,
+		duration: 1,
+		scrollTrigger: {
+			trigger: "#agency-model-logos",
+			scrub: 2,
+		},
 	});
 });

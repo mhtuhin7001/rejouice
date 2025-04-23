@@ -9,6 +9,8 @@
 			href="asset/favicon.png"
 			type="image/x-icon"
 		/>
+		<!-- Swiper Style -->
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
 		<!-- Main Style -->
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
@@ -196,7 +198,7 @@
 				autoplay
 				loop
 				muted
-				src="asset/hero-section.mp4"
+				src="asset/images/hero-section.mp4"
 				id="hero-reel"
 				class="relative w-full h-full object-cover z-10"
 			></video>
@@ -322,7 +324,7 @@
 				>
 				<video
 					muted
-					src="asset/hero-section-full.mp4"
+					src="asset/images/hero-section-full.mp4"
 					id="hero-full-reel"
 					class="absolute size-0 bg-black m-auto inset-0 -rotate-45 cursor-pointer z-50"
 				></video>
@@ -398,7 +400,10 @@
 		</section>
 
 		<!-- Agency Models -->
-		<section id="agency-models" class="bg-white p-(--sectionGap)">
+		<section
+			id="agency-models"
+			class="h-full bg-white p-(--sectionGap) pb-[20dvh]"
+		>
 			<div
 				class="h-dvh font-light flex flex-col justify-center items-center"
 			>
@@ -409,15 +414,17 @@
 						>Models</span
 					>
 				</h6>
-				<h1
-					id="models-title"
-					class="flex flex-col items-center mt-4 cursor-pointer"
-				>
-					Explore Our services <br />
-					& engagement models
-				</h1>
+				<a href="#">
+					<h1
+						id="models-title"
+						class="flex flex-col items-center mt-4"
+					>
+						Explore Our services <br />
+						& engagement models
+					</h1>
+				</a>
 			</div>
-			<div class="h-dvh">
+			<div class="lg:h-dvh">
 				<div class="flex justify-between items-center">
 					<h5>Highlight</h5>
 					<a
@@ -473,13 +480,13 @@
 						class="group relative col-start-1 col-end-3 lg:col-end-2"
 					>
 						<img
-							src="asset/model-1-logo.svg"
+							src="asset/images/model-1-logo.svg"
 							class="absolute h-3 right-1/2 bottom-1/4 left-1/2 -translate-1/2 z-10 transition-opacity duration-300 group-hover:opacity-0 sm:h-4 md:bottom-1/5 xl:h-6"
 							alt="Model Logo"
 							loading="lazy"
 						/>
 						<img
-							src="asset/model-1.avif"
+							src="asset/images/model-1.avif"
 							class="absolute size-full object-cover transition-opacity duration-300 group-hover:opacity-0"
 							alt="Model Image"
 							loading="lazy"
@@ -488,19 +495,19 @@
 							muted
 							loop
 							paused
-							src="asset/model-1.mp4"
+							src="asset/images/model-1.mp4"
 							class="size-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 						></video>
 					</div>
 					<div class="group relative">
 						<img
-							src="asset/model-2-logo.svg"
+							src="asset/images/model-2-logo.svg"
 							class="absolute h-3 right-1/2 bottom-1/4 left-1/2 -translate-1/2 z-10 transition-opacity duration-300 group-hover:opacity-0 sm:h-4 md:bottom-1/5 xl:h-6"
 							alt="Model Logo"
 							loading="lazy"
 						/>
 						<img
-							src="asset/model-2.avif"
+							src="asset/images/model-2.avif"
 							class="absolute size-full object-cover transition-opacity duration-300 group-hover:opacity-0"
 							alt="Model Image"
 							loading="lazy"
@@ -509,19 +516,19 @@
 							muted
 							loop
 							paused
-							src="asset/model-2.mp4"
+							src="asset/images/model-2.mp4"
 							class="size-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 						></video>
 					</div>
 					<div class="group relative">
 						<img
-							src="asset/model-3-logo.svg"
+							src="asset/images/model-3-logo.svg"
 							class="absolute h-3 right-1/2 bottom-1/4 left-1/2 -translate-1/2 z-10 transition-opacity duration-300 group-hover:opacity-0 sm:h-4 md:bottom-1/5 xl:h-6"
 							alt="Model Logo"
 							loading="lazy"
 						/>
 						<img
-							src="asset/model-3.avif"
+							src="asset/images/model-3.avif"
 							class="absolute size-full object-cover transition-opacity duration-300 group-hover:opacity-0"
 							alt="Model Image"
 							loading="lazy"
@@ -530,7 +537,7 @@
 							muted
 							loop
 							paused
-							src="asset/model-3.mp4"
+							src="asset/images/model-3.mp4"
 							class="size-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 						></video>
 					</div>
@@ -538,9 +545,261 @@
 			</div>
 		</section>
 
+		<!-- Agency Model Logos -->
+		<section
+			id="agency-model-logos"
+			class="overflow-hidden h-[60dvh] flex justify-center items-center bg-black whitespace-nowrap"
+		>
+			<div class="logos">
+				<img
+					src="asset/images/model-1-logo.svg"
+					class="inline-block h-3.5 mx-2 lg:h-5 2xl:h-7 lg:mx-3.5 2xl:mx-6"
+					alt="Agency Model Logo"
+				/>
+				<img
+					src="asset/images/model-2-logo.svg"
+					class="inline-block h-3.5 mx-2 lg:h-5 2xl:h-7 lg:mx-3.5 2xl:mx-6"
+					alt="Agency Model Logo"
+				/>
+				<img
+					src="asset/images/model-3-logo.svg"
+					class="inline-block h-3.5 mx-2 lg:h-5 2xl:h-7 lg:mx-3.5 2xl:mx-6"
+					alt="Agency Model Logo"
+				/>
+				<img
+					src="asset/images/model-4-logo.svg"
+					class="inline-block h-3.5 mx-2 lg:h-5 2xl:h-7 lg:mx-3.5 2xl:mx-6"
+					alt="Agency Model Logo"
+				/>
+				<img
+					src="asset/images/model-5-logo.svg"
+					class="inline-block h-3.5 mx-2 lg:h-5 2xl:h-7 lg:mx-3.5 2xl:mx-6"
+					alt="Agency Model Logo"
+				/>
+				<img
+					src="asset/images/model-6-logo.svg"
+					class="inline-block h-3.5 mx-2 lg:h-5 2xl:h-7 lg:mx-3.5 2xl:mx-6"
+					alt="Agency Model Logo"
+				/>
+				<img
+					src="asset/images/model-7-logo.svg"
+					class="inline-block h-3.5 mx-2 lg:h-5 2xl:h-7 lg:mx-3.5 2xl:mx-6"
+					alt="Agency Model Logo"
+				/>
+				<img
+					src="asset/images/model-8-logo.svg"
+					class="inline-block h-3.5 mx-2 lg:h-5 2xl:h-7 lg:mx-3.5 2xl:mx-6"
+					alt="Agency Model Logo"
+				/>
+			</div>
+		</section>
+
+		<!-- Work glance -->
+		<section id="work-glance" class="text-white bg-black">
+			<div
+				class="font-light flex justify-between items-center mx-(--sectionGap) py-4 border-t-1 border-t-[#ffffff33]"
+			>
+				<h5>Rejouice at a Glance.</h5>
+				<a href="mailto:hello@rejouice.com"
+					><h5
+						class="relative after:content-[''] after:absolute after:w-full after:h-px after:bg-white after:bottom-0 after:left-0 after:scale-x-0 after:origin-left after:transition-transform after:duration-600 after:ease-[cubic-bezier(0.85,0,0.15,1)] hover:after:scale-x-100 hover:after:origin-left"
+					>
+						hello@rejouice.com
+					</h5></a
+				>
+			</div>
+			<div class="swiper workGlance">
+				<div class="swiper-wrapper ease-linear!">
+					<div class="swiper-slide rounded-lg">
+						<img
+							src="asset/images/glance-1.avif"
+							class="size-full rounded-lg object-cover 2xl:rounded-2xl"
+							alt="Glance Image"
+						/>
+						<div
+							class="absolute top-4 left-4 md:top-6 md:left-6 2xl:top-8 2xl:left-8"
+						>
+							<h5 class="last:opacity-70">E-Commerce</h5>
+							<h5 class="last:opacity-70">
+								10+ Years of Expertice
+							</h5>
+						</div>
+					</div>
+					<div class="swiper-slide rounded-lg">
+						<video
+							src="asset/images/glance-2.mp4"
+							class="size-full rounded-lg object-cover 2xl:rounded-2xl"
+						></video>
+						<div
+							class="absolute top-4 left-4 md:top-6 md:left-6 2xl:top-8 2xl:left-8"
+						>
+							<h5 class="last:opacity-70">Catalyzed ~ 71,000</h5>
+							<h5 class="last:opacity-70">
+								pre-orders after brand reveal
+							</h5>
+						</div>
+						<img
+							src="asset/images/model-1-logo.svg"
+							class="absolute bottom-4 right-4 md:bottom-6 md:right-6 2xl:bottom-8 2xl:right-8"
+							alt="Glance Image"
+						/>
+					</div>
+					<div class="swiper-slide rounded-lg">
+						<img
+							src="asset/images/glance-3.avif"
+							class="size-full rounded-lg object-cover 2xl:rounded-2xl"
+							alt="Glnace Image"
+						/>
+						<div
+							class="absolute top-4 left-4 md:top-6 md:left-6 2xl:top-8 2xl:left-8"
+						>
+							<h5 class="last:opacity-70">Technology, Finace</h5>
+							<h5 class="last:opacity-70"></h5>
+						</div>
+						<img
+							src="asset/images/model-2-logo.svg"
+							class="absolute bottom-4 right-4 md:bottom-6 md:right-6 2xl:bottom-8 2xl:right-8"
+							alt="Glance Image"
+						/>
+					</div>
+					<div class="swiper-slide rounded-lg">
+						<img
+							src="asset/images/model-3.avif"
+							class="size-full rounded-lg object-cover 2xl:rounded-2xl"
+							alt="Glnace Image"
+						/>
+						<div
+							class="absolute top-4 left-4 md:top-6 md:left-6 2xl:top-8 2xl:left-8"
+						>
+							<h5 class="last:opacity-70"></h5>
+							<h5 class="last:opacity-70"></h5>
+						</div>
+						<img
+							src="asset/images/model-3-logo.svg"
+							class="absolute bottom-4 right-4 md:bottom-6 md:right-6 2xl:bottom-8 2xl:right-8"
+							alt="Glance Image"
+						/>
+					</div>
+					<div class="swiper-slide rounded-lg">
+						<video
+							src="asset/images/model-1.mp4"
+							class="size-full rounded-lg object-cover 2xl:rounded-2xl"
+						></video>
+						<div
+							class="absolute top-4 left-4 md:top-6 md:left-6 2xl:top-8 2xl:left-8"
+						>
+							<h5 class="last:opacity-70">The First Electric</h5>
+							<h5 class="last:opacity-70">Adventure Vehicle.</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Approach -->
+		<section id="approach" class="text-white bg-black p-(--sectionGap)">
+			<h1 class="font-light py-(--sectionGap) lg:pt-0">Our approach.</h1>
+			<div
+				class="font-light flex justify-between py-4 border-t-1 border-t-[#ffffff33]"
+			>
+				<p class="basis-1/2">
+					A simple philosophy: <br />
+					quality over quantity.
+				</p>
+				<div class="basis-1/2">
+					<p id="approach-description" class="lg:pr-[45%]">
+						We build brands that set new benchmarks. To do so, we
+						don’t do volume. We partner with only five clients a
+						year, ensuring unmatched focus, precision, and impact.
+						Every detail is crafted, every decision strategic, and
+						every outcome transformative.
+					</p>
+				</div>
+			</div>
+			<div
+				class="font-light flex justify-between py-4 border-t-1 border-t-[#ffffff33]"
+			>
+				<p class="basis-1/2">
+					Performance & emotion. <br />
+					You need both.
+				</p>
+				<div class="basis-1/2">
+					<p id="approach-description" class="lg:pr-[45%]">
+						Data is vital. Fostering an emotional connection with
+						your audience is equally vital if you want to drive
+						retention and advocacy. That’s why we create brands that
+						not only captivate but also deliver measurable and
+						sustainable growth.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quo
+			officiis id quia rerum itaque quas eveniet omnis nemo sunt, cumque
+			dolor reiciendis iure tempore soluta nulla hic placeat nam ex.
+			Corporis est, minima quibusdam, nam delectus, eos blanditiis
+			corrupti tempore pariatur consequuntur modi magni soluta? Tenetur
+			quidem magni fugit quis maxime sint, placeat voluptas, debitis
+			laboriosam repellat adipisci aliquam optio aut expedita excepturi.
+			Velit expedita quo delectus? Commodi debitis possimus eveniet quam
+			quas obcaecati illo dicta tenetur corrupti fuga reprehenderit
+			molestias fugit nihil quo harum cupiditate molestiae rem nobis
+			cumque facere, consequatur numquam asperiores. Consectetur atque
+			praesentium vel maiores similique ipsum eveniet molestiae fugit
+			nulla ut molestias assumenda aspernatur a vitae placeat fugiat dicta
+			illum architecto suscipit et dolorem porro ad, inventore dolor?
+			Ullam distinctio quasi, unde cum a soluta explicabo nobis vel
+			incidunt quis voluptas tenetur fuga in. Eaque alias magnam
+			laboriosam sed fugit adipisci repellendus velit porro numquam? Vel
+			quia nam quas consectetur eligendi? Molestias voluptates ducimus
+			odio dolorum reprehenderit vero eum perferendis similique quos
+			praesentium voluptatibus assumenda optio ut itaque cum rerum ex
+			veniam dignissimos distinctio, tempore pariatur asperiores sequi
+			porro fugiat. Modi, vel. Repellendus tempore eum molestiae placeat
+			illum inventore eaque nulla sapiente quae ipsam. Odio impedit dicta
+			suscipit repellat amet deleniti? Cupiditate, asperiores quas nulla
+			commodi ipsum facilis magnam dolore quod, tempora porro culpa,
+			aliquam ducimus molestiae incidunt voluptatem aperiam quasi
+			voluptatibus. Officiis labore odio sequi voluptatibus fugiat facilis
+			minima, placeat, unde cum enim sapiente vel ad ea! Illo maiores
+			autem excepturi placeat voluptatibus, voluptatum consectetur
+			suscipit modi animi? Magnam dicta, nam doloremque rem quod labore?
+			Quidem enim voluptas optio, eos, beatae nobis ipsa nulla magnam ut
+			repellat, fugiat quos voluptatibus? Et perferendis dignissimos illo
+			non itaque distinctio, vitae vel reprehenderit reiciendis rerum eius
+			illum mollitia odit, quas ad laudantium labore officiis at
+			asperiores tempora. Nihil quia ipsum reiciendis iure aliquam
+			aspernatur! Aliquam fugit ea ad voluptates sed recusandae, atque
+			fuga? Atque tempora perspiciatis distinctio, magni doloremque
+			dolorem quos dolor debitis velit, deserunt perferendis accusantium
+			vel nihil consequatur alias error possimus cupiditate cumque
+			deleniti architecto autem ea expedita eaque exercitationem. Eius
+			libero maiores qui porro iure non officia, ab fugiat officiis ipsam
+			sed consequatur facere, aperiam quidem? Saepe, assumenda!
+			Consequuntur veniam, iure incidunt beatae repudiandae autem ducimus
+			sit harum, aspernatur animi debitis fugit sunt fugiat, voluptates
+			sequi. Deserunt nulla animi harum cumque vero perferendis distinctio
+			qui rerum quod fugiat quo aut, voluptates architecto unde, non
+			inventore aspernatur accusamus officia natus. Pariatur voluptate
+			ullam consequuntur doloribus maiores laudantium culpa quibusdam.
+			Assumenda expedita eum itaque tempora eveniet sequi amet, vero nemo
+			mollitia maxime explicabo? Ipsa veritatis quos commodi nemo illo
+			laudantium repellendus itaque, modi, doloremque ab hic nobis illum
+			temporibus accusamus error eaque non totam? Quas voluptas excepturi
+			asperiores illum voluptates earum fuga commodi odit atque eum
+			voluptatum, aliquid, sunt quo voluptatibus iure impedit aliquam
+			tenetur ullam magni repellat soluta ex explicabo? Deleniti
+			repellendus ab cumque iusto pariatur unde fugit accusantium hic sed
+			modi minima aut consequatur nostrum, error obcaecati maxime vero
+			fugiat ipsum laborum tempora.
+		</p>
 		<!-- JQuery Script -->
 		<script src="js/jquery-3.7.1.min.js"></script>
-		<!-- Locomotive Script -->
+		<!-- Swiper Script -->
+		<script src="js/swiper-bundle.min.js"></script>
+		<!-- Lenis Script -->
 		<script src="js/lenis.min.js"></script>
 		<!-- GSAP Script -->
 		<script src="js/gsap.min.js"></script>
@@ -550,5 +809,35 @@
 		<script src="js/SplitText.min.js"></script>
 		<!-- Main Script -->
 		<script src="js/script.js"></script>
+
+		<script>
+			// Glance Slide Initilization
+			var swiper = new Swiper(".workGlance", {
+				freeMode: true,
+				grabCursor: true,
+				loop: true,
+				speed: 7000,
+				spaceBetween: 30,
+				autoplay: {
+					delay: 0,
+					pauseOnMouseEnter: true,
+				},
+				breakpoints: {
+					0: {
+						slidesPerView: 1,
+					},
+					640: {
+						slidesPerView: 2,
+					},
+					1280: {
+						slidesPerView: 3,
+					},
+					1536: {
+						slidesPerView: 4,
+						spaceBetween: 40,
+					},
+				},
+			});
+		</script>
 	</body>
 </html>
