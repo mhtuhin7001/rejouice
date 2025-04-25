@@ -550,7 +550,7 @@
 			id="agency-model-logos"
 			class="overflow-hidden h-[60dvh] flex justify-center items-center bg-black whitespace-nowrap"
 		>
-			<div class="logos">
+			<div id="model-logos">
 				<img
 					src="asset/images/model-1-logo.svg"
 					class="inline-block h-3.5 mx-2 lg:h-5 2xl:h-7 lg:mx-3.5 2xl:mx-6"
@@ -595,7 +595,7 @@
 		</section>
 
 		<!-- Work glance -->
-		<section id="work-glance" class="text-white bg-black">
+		<section id="work-glance" class="h-full text-white bg-black">
 			<div
 				class="font-light flex justify-between items-center mx-(--sectionGap) py-4 border-t-1 border-t-[#ffffff33]"
 			>
@@ -656,6 +656,24 @@
 							<h5 class="last:opacity-70">Technology, Finace</h5>
 							<h5 class="last:opacity-70"></h5>
 						</div>
+						<a
+							href="#"
+							class="absolute font-light flex items-center gap-1 bottom-4 left-4 md:bottom-6 md:left-6 2xl:bottom-8 2xl:left-8"
+							>Learn More<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="size-4 2xl:size-6"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+								/>
+							</svg>
+						</a>
 						<img
 							src="asset/images/model-2-logo.svg"
 							class="absolute bottom-4 right-4 md:bottom-6 md:right-6 2xl:bottom-8 2xl:right-8"
@@ -691,6 +709,24 @@
 							<h5 class="last:opacity-70">The First Electric</h5>
 							<h5 class="last:opacity-70">Adventure Vehicle.</h5>
 						</div>
+						<a
+							href="#"
+							class="absolute font-light flex items-center gap-1 bottom-4 left-4 md:bottom-6 md:left-6 2xl:bottom-8 2xl:left-8"
+							>Learn More<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="size-4 2xl:size-6"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+								/>
+							</svg>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -698,41 +734,77 @@
 
 		<!-- Approach -->
 		<section id="approach" class="text-white bg-black p-(--sectionGap)">
-			<h1 class="font-light py-(--sectionGap) lg:pt-0">Our approach.</h1>
-			<div
-				class="font-light flex justify-between py-4 border-t-1 border-t-[#ffffff33]"
-			>
-				<p class="basis-1/2">
-					A simple philosophy: <br />
-					quality over quantity.
-				</p>
-				<div class="basis-1/2">
-					<p id="approach-description" class="lg:pr-[45%]">
-						We build brands that set new benchmarks. To do so, we
-						don’t do volume. We partner with only five clients a
-						year, ensuring unmatched focus, precision, and impact.
-						Every detail is crafted, every decision strategic, and
-						every outcome transformative.
+			<div>
+				<h1 class="font-light py-(--sectionGap) lg:pt-0">
+					Our approach.
+				</h1>
+				<div
+					class="font-light flex justify-between py-4 border-t-1 border-t-[#ffffff33]"
+				>
+					<p class="basis-1/2">
+						A simple philosophy: <br />
+						quality over quantity.
 					</p>
+					<div class="basis-1/2">
+						<p id="approach-description" class="lg:pr-[45%]">
+							We build brands that set new benchmarks. To do so,
+							we don’t do volume. We partner with only five
+							clients a year, ensuring unmatched focus, precision,
+							and impact. Every detail is crafted, every decision
+							strategic, and every outcome transformative.
+						</p>
+					</div>
+				</div>
+				<div
+					class="font-light flex justify-between py-4 border-t-1 border-t-[#ffffff33]"
+				>
+					<p class="basis-1/2">
+						Performance & emotion. <br />
+						You need both.
+					</p>
+					<div class="basis-1/2">
+						<p id="approach-description" class="lg:pr-[45%]">
+							Data is vital. Fostering an emotional connection
+							with your audience is equally vital if you want to
+							drive retention and advocacy. That’s why we create
+							brands that not only captivate but also deliver
+							measurable and sustainable growth.
+						</p>
+					</div>
 				</div>
 			</div>
-			<div
-				class="font-light flex justify-between py-4 border-t-1 border-t-[#ffffff33]"
-			>
-				<p class="basis-1/2">
-					Performance & emotion. <br />
-					You need both.
-				</p>
-				<div class="basis-1/2">
-					<p id="approach-description" class="lg:pr-[45%]">
-						Data is vital. Fostering an emotional connection with
-						your audience is equally vital if you want to drive
-						retention and advocacy. That’s why we create brands that
-						not only captivate but also deliver measurable and
-						sustainable growth.
-					</p>
+			<div class="flex justify-center items-center">
+				<div id="approach-video" class="w-full h-dvh mt-(--sectionGap)">
+					<video
+						muted
+						autoplay
+						loop
+						src="asset/images/approach.mp4"
+						class="size-full object-cover"
+					></video>
 				</div>
 			</div>
+		</section>
+
+		<!-- Know Us -->
+		<section
+			id="know-us"
+			class="h-dvh text-black bg-white flex justify-center items-center p-(--sectionGap)"
+		>
+			<a
+				href="about.html"
+				id="know-us-title"
+				class="overflow-hidden inline-flex flex-col justify-end items-center font-light"
+			>
+				<h1 id="default-title" class="translate-y-full">
+					Get to know us
+				</h1>
+				<h1 id="reveal-title">About Us</h1>
+				<span
+					id="bottom-border"
+					class="absolute h-[3px] bg-black transition-all duration-300"
+				></span>
+			</a>
 		</section>
 
 		<p>

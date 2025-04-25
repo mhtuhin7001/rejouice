@@ -8,6 +8,8 @@ $(document).ready(function () {
 	requestAnimationFrame(raf);
 });
 
+gsap.registerPlugin(SplitText, ScrollTrigger);
+
 // First View
 $(document).ready(function () {
 	let gsapTl = gsap.timeline();
@@ -172,8 +174,6 @@ $(document).ready(function () {
 
 // Line Reveal Animation
 $(document).ready(function () {
-	gsap.registerPlugin(SplitText, ScrollTrigger);
-
 	["#about-describe", "#models-title", "#approach-description"].forEach(
 		(selector) => {
 			new SplitText(selector, {
@@ -236,7 +236,7 @@ $(document).ready(function () {
 // Agency Model Logos
 $(document).ready(function () {
 	// Duplicate Logo
-	const $wrapper = $("#agency-model-logos .logos");
+	const $wrapper = $("#agency-model-logos #model-logos");
 	const $logos = $wrapper.children().clone();
 	let totalWidth = 0;
 	const screenWidth = $(window).width();
@@ -251,12 +251,64 @@ $(document).ready(function () {
 	}
 
 	// Logos Animation
-	gsap.to("#agency-model-logos .logos img", {
+	gsap.to("#agency-model-logos #model-logos img", {
 		x: -500,
 		duration: 1,
 		scrollTrigger: {
 			trigger: "#agency-model-logos",
 			scrub: 2,
 		},
+	});
+});
+
+// Approach Video
+$(document).ready(function () {
+	const video = document.getElementById("approach-video");
+	gsap.from(video, {
+		width: "60%",
+		duration: 4,
+		scrollTrigger: {
+			trigger: video,
+			scrub: 2,
+			end: "0%",
+		},
+	});
+});
+
+// Know Us Title
+$(document).ready(function () {
+	const $knowUsTitle = $("#know-us-title");
+	const $defaultTitle = $("#default-title");
+	const $revealTitle = $("#reveal-title");
+	const $border = $("#bottom-border");
+	$knowUsTitle.width($defaultTitle.outerWidth());
+	$knowUsTitle.height($defaultTitle.outerHeight());
+	$border.width($defaultTitle.outerWidth());
+	const $split = new SplitText($defaultTitle, { type: "chars" });
+	const $split2 = new SplitText($revealTitle, { type: "chars" });
+
+	let gsapTl = gsap.timeline({ paused: true });
+	gsapTl.to($split.chars, {
+		y: "-100%",
+		opacity: 0,
+		duration: 0.3,
+		stagger: -0.02,
+		onComplete: function () {
+			$border.width($revealTitle.outerWidth());
+		},
+	});
+	gsapTl.from($split2.chars, {
+		y: "100%",
+		opacity: 0,
+		stagger: 0.02,
+	});
+
+	$($knowUsTitle).on("mouseenter", function () {
+		gsapTl.play();
+	});
+	$($knowUsTitle).on("mouseleave", function () {
+		gsapTl.reverse().eventCallback("onReverseComplete", function () {
+			$border.width($defaultTitle.outerWidth());
+		});
 	});
 });
