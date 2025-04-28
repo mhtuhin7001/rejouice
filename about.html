@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>About | REJOUICE®</title>
+		<link
+			rel="shortcut icon"
+			href="asset/favicon.png"
+			type="image/x-icon"
+		/>
+		<!-- Swiper Style -->
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<!-- Main Style -->
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body class="overflow-x-hidden font-nbPro">
+		<!-- Header -->
+		<header
+			class="fixed w-full text-white flex justify-between items-center px-(--sectionGap) pt-[clamp(1.5rem,2%,3.5rem)] mix-blend-difference inset-0 bottom-auto z-50"
+		>
+			<a href="index.html">The Venture Agency.</a>
+			<button id="menu-open" class="cursor-pointer">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="w-[clamp(1.5rem,calc(1.3vw+1rem),3rem)]"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5"
+					/>
+				</svg>
+			</button>
+		</header>
+		<!-- Nav Menu -->
+		<nav
+			id="main-menu"
+			class="fixed overflow-hidden w-full max-h-0 text-black bg-portlandOrange flex flex-wrap gap-3 p-[clamp(1rem,3%,3.5rem)] pb-2 -top-full left-0 z-50 lg:pb-3"
+		>
+			<div class="basis-full flex justify-between items-center">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 68 12"
+					class="logo w-1/6"
+					data-v-62f3805e=""
+				>
+					<path
+						fill="currentColor"
+						d="M32.606 5.931c0-3.353-2.36-5.23-5.074-5.23S22.46 2.598 22.46 5.93c0 3.353 2.36 5.27 5.073 5.27 2.715 0 5.074-1.936 5.074-5.27M0 10.932h1.73v-5.48c0-1.916 1.004-2.95 2.597-2.95h1.062V.854H4.366C2.262.854 0 2.157 0 5.318zm5.731-5c0 3.525 2.321 5.268 5.055 5.268 2.596 0 4.326-1.418 4.68-3.43h-1.77c-.334 1.17-1.278 1.878-2.871 1.878-1.691 0-3.127-.958-3.284-3.161h7.925a6 6 0 0 0 .06-.843c0-2.453-1.515-4.905-4.8-4.943C7.876.662 5.732 2.655 5.732 5.93M7.58 5.03c.256-1.974 1.495-2.778 3.107-2.778 1.495 0 2.793.785 3.01 2.778zm8.308 6.016h1.022c2.105 0 4.366-1.303 4.366-4.464V.969h-1.73v5.48c0 1.916-1.003 2.95-2.596 2.95h-1.062zm8.36-5.097c0-2.567 1.514-3.697 3.284-3.697s3.285 1.13 3.285 3.697c0 2.472-1.515 3.698-3.285 3.698s-3.284-1.226-3.284-3.698m9.49 1.016c0 3.065 2.4 4.234 4.445 4.234s4.444-1.168 4.444-4.234V.969h-1.73v5.652c0 2.223-1.121 3.046-2.714 3.046s-2.714-.823-2.714-3.046V.97h-1.73zm10.27 3.966h1.731V.969h-1.73zm2.71-5c0 3.352 2.321 5.268 5.075 5.268 2.556 0 4.582-1.533 4.779-4.292h-1.75c-.256 1.84-1.495 2.74-3.069 2.74-1.79 0-3.245-1.226-3.245-3.698 0-2.567 1.475-3.697 3.226-3.697 1.553 0 2.851.613 3.087 2.452h1.75C56.376 1.985 54.31.701 51.774.701c-2.714 0-5.054 1.897-5.054 5.23m10.688 0c0 3.525 2.32 5.268 5.054 5.268 2.596 0 4.327-1.418 4.681-3.43h-1.77c-.334 1.17-1.278 1.878-2.871 1.878-1.692 0-3.127-.958-3.285-3.161h7.926a6 6 0 0 0 .059-.843C67.2 3.19 65.686.739 62.401.7c-2.851-.039-4.995 1.954-4.995 5.23m1.849-.901c.255-1.974 1.494-2.778 3.107-2.778 1.495 0 2.793.785 3.009 2.778z"
+					></path>
+				</svg>
+				<button
+					id="menu-close"
+					class="underline cursor-pointer lg:text-xl 2xl:text-3xl"
+				>
+					close
+				</button>
+			</div>
+			<div
+				class="hidden me-auto md:basis-1/3 md:flex md:flex-col md:justify-between"
+			>
+				<video
+					autoplay
+					loop
+					muted
+					src="asset/images/hero-section-full.mp4"
+					class="relative rounded-md bg-black lg:w-10/12"
+				></video>
+				<div class="hidden lg:flex lg:justify-between">
+					<p>
+						Strategy, Design, <br />
+						and Performance.
+					</p>
+					<p>
+						Two Engagement <br />
+						Models: Cash or Equity.
+					</p>
+				</div>
+			</div>
+			<div class="basis-1/2 mb-4">
+				<ul class="flex flex-col items-start gap-1.5">
+					<li class="menu-item current-menu-item">
+						<a href="index.html">Home</a>
+					</li>
+					<li class="menu-item">
+						<a href="work.html">Work</a>
+					</li>
+					<li class="menu-item">
+						<a href="about.html">About</a>
+					</li>
+					<li class="menu-item">
+						<a href="services.html">Services</a>
+					</li>
+					<li class="menu-item">
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+				<button
+					class="overflow-hidden relative mt-4 px-5 py-2.5 border-1 border-black rounded-md hover:text-portlandOrange cursor-pointer z-2 before:content-[''] before:w-full before:absolute before:h-full before:bg-black before:rounded-md before:top-0 before:-left-full hover:before:left-0 before:transition-all before:duration-300 before:-z-1 lg:text-xl 2xl:text-3xl lg:px-7 2xl:py-5"
+				>
+					Take a seat
+				</button>
+			</div>
+			<div
+				class="basis-full flex justify-center items-center border-t-2 border-t-[#00000033] pt-2.5 md:justify-between"
+			>
+				<p class="hidden md:block lg:text-xl 2xl:text-3xl">
+					Tommorow's Brand. Today.
+				</p>
+				<div class="flex items-center gap-3.5">
+					<a
+						href="#"
+						class="flex text-lg font-light lg:text-xl 2xl:text-3xl"
+					>
+						x
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="size-2"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+							/>
+						</svg>
+					</a>
+					<a
+						href="#"
+						class="flex text-lg font-light lg:text-xl 2xl:text-3xl"
+					>
+						Instagram
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="size-2"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+							/>
+						</svg>
+					</a>
+					<a
+						href="#"
+						class="flex text-lg font-light lg:text-xl 2xl:text-3xl"
+					>
+						Linkedin
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="size-2"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+							/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero -->
+		<section
+			id="about-hero"
+			class="font-light text-black bg-white p-(--sectionGap)"
+		>
+			<div class="flex items-center py-16 md:h-[80vh] md:py-0">
+				<h1 id="about-title">
+					We are a collective of seasoned creatives, strategists,
+					growth marketers, and technologists, dedicated to
+					transforming ambitious visions into high-performing brands.
+				</h1>
+			</div>
+			<div
+				class="flex justify-between py-3.5 border-t-1 border-t-[#00000055]"
+			>
+				<p class="basis-1/2">
+					We operate on <br />
+					simple principles
+				</p>
+				<div class="basis-1/2">
+					<ol class="list-decimal">
+						<li>Put people first</li>
+						<li>Pursue excellence</li>
+						<li>Embrace challenges</li>
+					</ol>
+					<p class="mt-4 lg:pr-[40%]">
+						These three principles have earned us numerous awards.
+						While we don’t chase accolades, they are proof of our
+						dedication to impact, quality, and innovation.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Awards -->
+		<section
+			id="awards"
+			class="font-light text-black bg-white p-(--sectionGap)"
+		>
+			<div>
+				<div class="h-dvh flex items-end justify-end">
+					<h2
+						id="award-title"
+						class="overflow-hidden text-[min(calc(20vw+1rem),33rem)] sm:mr-(--sectionGap)"
+					>
+						Awards
+					</h2>
+				</div>
+				<div
+					class="flex justify-between py-3.5 border-t-1 border-t-[#00000055]"
+				>
+					<p class="basis-1/2">Awards for digital innovation</p>
+					<p class="basis-1/2">
+						25 x Awwwards <br />
+						15 x FWA <br />
+						22 x CSS Design <br />
+						02 x Webby <br />
+						...and more.
+					</p>
+				</div>
+			</div>
+			<div class="flex justify-center items-center pb-(--sectionGap)">
+				<div id="approach-video" class="w-full h-dvh mt-(--sectionGap)">
+					<video
+						muted
+						autoplay
+						loop
+						src="asset/images/approach.mp4"
+						class="size-full object-cover"
+					></video>
+				</div>
+			</div>
+			<div class="py-(--sectionGap)">
+				<h1 id="attention-text">
+					Attention is earned, not given. Great work matters most when
+					it inspires action. We build brands that transform attention
+					into transactions by unlocking your brand's potential for
+					impact and growth.
+				</h1>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="text-black bg-white p-(--sectionGap)">
+			<div
+				class="flex flex-col-reverse gap-20 md:flex-row md:gap-0 md:justify-between"
+			>
+				<div class="md:basis-1/2">
+					<h4 class="hidden md:block md:mb-4">
+						Do it once. Do it right.
+					</h4>
+					<div class="hidden md:inline-block md:mb-4">
+						<p class="-mb-1">New Business:</p>
+						<a
+							href="mailto:hello@rejouice.com"
+							class="relative after:content-[''] after:absolute after:w-full after:h-px after:bg-black after:-bottom-1 after:left-0 after:scale-x-0 after:origin-left after:transition-transform after:duration-600 after:ease-[cubic-bezier(0.85,0,0.15,1)] hover:after:scale-x-100 hover:after:origin-left"
+							><p class="inline-block">hello@rejouice.com</p></a
+						>
+					</div>
+					<form action="" class="relative">
+						<label for="newsletter-email"
+							>Sign up for our newsletter (No spam)</label
+						>
+						<input
+							type="email"
+							id="newsletter-email"
+							class="block w-full h-8 border-b-1 border-b-black pr-6 focus:outline-none md:w-4/5 lg:w-2/3 2xl:h-11"
+							placeholder="Email"
+						/>
+						<button
+							type="submit"
+							class="absolute cursor-pointer right-0 bottom-1.5 md:right-1/5 lg:right-2/6"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="size-4 2xl:size-6"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+								/>
+							</svg>
+						</button>
+					</form>
+				</div>
+				<div class="flex justify-between">
+					<ul>
+						<li class="menu-item">
+							<a href="index.html">Home</a>
+						</li>
+						<li class="menu-item">
+							<a href="work.html">Work</a>
+						</li>
+						<li class="menu-item">
+							<a href="about.html">About</a>
+						</li>
+						<li class="menu-item">
+							<a href="services.html">Services</a>
+						</li>
+						<li class="menu-item">
+							<a href="contact.html">Contact</a>
+						</li>
+					</ul>
+					<div>
+						<div class="mb-2">
+							<a
+								href="#"
+								class="see-btn group relative flex items-center"
+							>
+								<span
+									class="-translate-x-full translate-y-full opacity-0 transition-all duration-500 group-hover:translate-x-full group-hover:translate-y-0 group-hover:opacity-100"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										class="hidden size-5 md:block 2xl:size-7"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+										/>
+									</svg>
+								</span>
+								<span
+									class="transition-all duration-500 group-hover:translate-x-5"
+									>linkedin</span
+								>
+								<span
+									class="transition-all duration-500 group-hover:translate-x-full group-hover:-translate-y-full group-hover:opacity-0"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										class="size-5 2xl:size-7"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+										/>
+									</svg>
+								</span>
+							</a>
+							<a
+								href="#"
+								class="see-btn group relative flex items-center"
+							>
+								<span
+									class="-translate-x-full translate-y-full opacity-0 transition-all duration-500 group-hover:translate-x-full group-hover:translate-y-0 group-hover:opacity-100"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										class="hidden size-5 md:block 2xl:size-7"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+										/>
+									</svg>
+								</span>
+								<span
+									class="transition-all duration-500 group-hover:translate-x-5"
+									>Instagram</span
+								>
+								<span
+									class="transition-all duration-500 group-hover:translate-x-full group-hover:-translate-y-full group-hover:opacity-0"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										class="size-5 2xl:size-7"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+										/>
+									</svg>
+								</span>
+							</a>
+						</div>
+						<div class="md:hidden">
+							<p class="-mb-1">New Business:</p>
+							<a
+								href=""
+								class="relative after:content-[''] after:absolute after:w-full after:h-px after:bg-black after:-bottom-1 after:left-0 after:scale-x-0 after:origin-left after:transition-transform after:duration-600 after:ease-[cubic-bezier(0.85,0,0.15,1)] hover:after:scale-x-100 hover:after:origin-left"
+								><p class="inline-block">
+									hello@rejouice.com
+								</p></a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div
+				id="footer-brand"
+				class="w-[90vw] max-w-[120rem] mt-10 lg:mt-20 2xl:mt-40"
+			>
+				<svg
+					id="Calque_1"
+					xmlns="http://www.w3.org/2000/svg"
+					version="1.1"
+					viewBox="0 0 1358 217"
+					fill="black"
+					class="logo"
+					data-v-9fb53f58=""
+				>
+					<path
+						class="letter"
+						d="M1358,102.2c0-50.7-30.6-101.4-97-102.2-57.6-.8-101,40.4-101,108.1s46.9,108.9,102.1,108.9,87.4-29.3,94.6-70.9h-35.8c-6.8,24.2-25.8,38.8-58,38.8s-63.2-19.8-66.4-65.3h160.2c.8-5.9,1.2-11.5,1.2-17.4ZM1197.4,89.5c5.2-40.8,30.2-57.4,62.8-57.4s56.4,16.2,60.8,57.4h-123.6Z"
+						data-svg-origin="1160 -0.01144199725240469"
+						transform="matrix(1,0,0,1,0,0)"
+						style="
+							translate: none;
+							rotate: none;
+							scale: none;
+							transform-origin: 0px 0px;
+						"
+					></path>
+					<path
+						class="letter"
+						d="M1045.4,32.1c31.4,0,57.6,12.7,62.4,50.7h35.4C1139.2,26.5,1097.5,0,1046.2,0s-102.1,39.2-102.1,108.1,46.9,108.9,102.5,108.9,92.6-31.7,96.6-88.7h-35.4c-5.2,38-30.2,56.6-62,56.6s-65.6-25.3-65.6-76.4,29.8-76.4,65.2-76.4Z"
+						data-svg-origin="944.0999755859375 0"
+						transform="matrix(1,0,0,1,0,0)"
+						style="
+							translate: none;
+							rotate: none;
+							scale: none;
+							transform-origin: 0px 0px;
+						"
+					></path>
+					<rect
+						class="letter"
+						x="889.3"
+						y="5.6"
+						width="35"
+						height="205.9"
+						data-svg-origin="889.2999877929688 5.599999904632568"
+						transform="matrix(1,0,0,1,0,0)"
+						style="
+							translate: none;
+							rotate: none;
+							scale: none;
+							transform-origin: 0px 0px;
+						"
+					></rect>
+					<path
+						class="letter"
+						d="M826.5,122.4c0,45.9-22.7,63-54.8,63s-54.8-17-54.8-63V5.6h-35v123.9c0,63.4,48.5,87.5,89.8,87.5s89.8-24.2,89.8-87.5V5.6h-35v116.8Z"
+						data-svg-origin="681.9000244140625 5.599999904632568"
+						transform="matrix(1,0,0,1,0,0)"
+						style="
+							translate: none;
+							rotate: none;
+							scale: none;
+							transform-origin: 0px 0px;
+						"
+					></path>
+					<path
+						class="letter"
+						d="M556.4,0c-54.8,0-102.5,39.2-102.5,108.1s47.7,108.9,102.5,108.9,102.5-40,102.5-108.9S611.2,0,556.4,0ZM556.4,184.9c-35.8,0-66.4-25.3-66.4-76.4s30.6-76.4,66.4-76.4,66.4,23.4,66.4,76.4-30.6,76.4-66.4,76.4Z"
+						data-svg-origin="453.9000244140625 0"
+						transform="matrix(1,0,0,1,0,0)"
+						style="
+							translate: none;
+							rotate: none;
+							scale: none;
+							transform-origin: 0px 0px;
+						"
+					></path>
+					<path
+						class="letter"
+						d="M395,118.8c0,39.6-20.3,61-52.5,61h-21.5v34.1h20.7c42.5,0,88.2-26.9,88.2-92.3V5.6h-35v113.2Z"
+						data-svg-origin="321 5.599999904632568"
+						transform="matrix(1,0,0,1,0,0)"
+						style="
+							translate: none;
+							rotate: none;
+							scale: none;
+							transform-origin: 0px 0px;
+						"
+					></path>
+					<path
+						class="letter"
+						d="M216.8,0c-57.6-.8-100.9,40.4-100.9,108.1s46.9,108.9,102.1,108.9,87.4-29.3,94.6-70.9h-35.8c-6.8,24.2-25.8,38.8-58,38.8s-63.2-19.8-66.4-65.3h160.2c.8-5.9,1.2-11.5,1.2-17.4C313.7,51.5,283.1.8,216.8,0ZM153.2,89.5c5.2-40.8,30.2-57.4,62.8-57.4s56.4,16.2,60.8,57.4h-123.6Z"
+						data-svg-origin="115.9000015258789 -0.01144199725240469"
+						transform="matrix(1,0,0,1,0,0)"
+						style="
+							translate: none;
+							rotate: none;
+							scale: none;
+							transform-origin: 0px 0px;
+						"
+					></path>
+					<path
+						class="letter"
+						d="M0,95.4v116h35v-113.2c0-39.6,20.3-61,52.5-61h21.5V3.2h-20.7C45.7,3.2,0,30.1,0,95.4Z"
+						data-svg-origin="0 3.200000047683716"
+						transform="matrix(1,0,0,1,0,0)"
+						style="
+							translate: none;
+							rotate: none;
+							scale: none;
+							transform-origin: 0px 0px;
+						"
+					></path>
+				</svg>
+			</div>
+		</footer>
+
+		<!-- JQuery Script -->
+		<script src="js/jquery-3.7.1.min.js"></script>
+		<!-- Swiper Script -->
+		<script src="js/swiper-bundle.min.js"></script>
+		<!-- Lenis Script -->
+		<script src="js/lenis.min.js"></script>
+		<!-- GSAP Script -->
+		<script src="js/gsap.min.js"></script>
+		<!-- ScrollTrigger Script -->
+		<script src="js/ScrollTrigger.min.js"></script>
+		<!-- SplitText Script -->
+		<script src="js/SplitText.min.js"></script>
+		<!-- Main Script -->
+		<script src="js/script.js"></script>
+
+		<script>
+			// First View
+			$(document).ready(function () {
+				const $aboutTitle = $("#about-title");
+				new SplitText($aboutTitle, {
+					type: "lines",
+					linesClass: "lineChild",
+				});
+				new SplitText($aboutTitle, {
+					type: "lines",
+					linesClass: "lineParent",
+				});
+				gsap.fromTo(
+					`#about-title .lineChild`,
+					{ yPercent: 100, opacity: 0 },
+					{
+						yPercent: 0,
+						opacity: 1,
+						duration: 0.5,
+						stagger: 0.15,
+						ease: "power3.out",
+					}
+				);
+			});
+
+			// Award Title
+			$(document).ready(function () {
+				const split = new SplitText("#award-title", { type: "chars" });
+				gsap.from(split.chars, {
+					y: "100%",
+					opacity: 0,
+					duration: 0.5,
+					stagger: 0.05,
+					scrollTrigger: {
+						trigger: "#award-title",
+						start: "top 60%",
+					},
+				});
+			});
+		</script>
+	</body>
+</html>

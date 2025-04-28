@@ -9,13 +9,19 @@
 h1 {
 	@apply text-[clamp(1.5rem,calc(3vw+1rem),5.7rem)] leading-[clamp(2rem,calc(3vw+1.5rem),6.2rem)];
 }
+h4 {
+	@apply text-[clamp(1rem,calc(1.5vw+0.5rem),2.75rem)];
+}
 h5,
 header a,
-.see-models {
+.see-btn,
+#awards p {
 	@apply text-[clamp(1rem,calc(1vw+0.5rem),2rem)];
 }
 h6,
-p {
+p,
+li,
+label {
 	@apply text-[clamp(.9rem,calc(1vw+0.20rem),1.5rem)];
 }
 
@@ -35,7 +41,8 @@ html.lenis body {
 }
 
 /* Nav Menu */
-#main-menu .menu-item {
+#main-menu .menu-item,
+footer .menu-item {
 	@apply overflow-hidden font-light text-[clamp(1.5rem,calc(3vw+1rem),5.7rem)] leading-[clamp(1.5rem,calc(3vw+1rem),5.7rem)];
 }
 .menu-item.current-menu-item {
@@ -54,7 +61,7 @@ html.lenis body {
 	transform: translateY(2lh);
 }
 
-/* About Us */
+/* Line Reveal */
 .lineParent {
 	@apply overflow-hidden max-w-max;
 }
