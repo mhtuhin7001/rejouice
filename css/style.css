@@ -15,7 +15,8 @@ h4 {
 h5,
 header a,
 .see-btn,
-#awards p {
+#awards p,
+#about-company p {
 	@apply text-[clamp(1rem,calc(1vw+0.5rem),2rem)];
 }
 h6,

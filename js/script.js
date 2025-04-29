@@ -78,6 +78,9 @@ $(document).ready(function () {
 		"#models-title",
 		"#approach-description",
 		"#attention-text",
+		"#founder-describe",
+		"#about-company p",
+		"#experts-title",
 	].forEach((selector) => {
 		new SplitText(selector, {
 			type: "lines",
@@ -108,7 +111,7 @@ $(document).ready(function () {
 	});
 });
 
-// Approach Video
+// Video Scroll Animation
 $(document).ready(function () {
 	const video = document.getElementById("approach-video");
 	gsap.from(video, {
@@ -119,5 +122,79 @@ $(document).ready(function () {
 			scrub: 2,
 			end: "0%",
 		},
+	});
+});
+
+// Sliders
+$(document).ready(function () {
+	function initializeSwiper(selector) {
+		return new Swiper(selector, {
+			freeMode: true,
+			grabCursor: true,
+			loop: true,
+			speed: 7000,
+			spaceBetween: 30,
+			autoplay: {
+				delay: 0,
+				pauseOnMouseEnter: true,
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				640: {
+					slidesPerView: 2,
+				},
+				1280: {
+					slidesPerView: 3,
+				},
+				1536: {
+					slidesPerView: 4,
+					spaceBetween: 40,
+				},
+			},
+		});
+	}
+
+	// Initialize Sliders
+	initializeSwiper(".workGlance");
+	initializeSwiper(".experts");
+});
+
+// Title Reveal Animation
+$(document).ready(function () {
+	const $Title = $("#know-us-title, #join-title");
+	const $defaultTitle = $("#default-title");
+	const $revealTitle = $("#reveal-title");
+	const $border = $("#bottom-border");
+	$Title.width($defaultTitle.outerWidth());
+	$Title.height($defaultTitle.outerHeight());
+	$border.width($defaultTitle.outerWidth());
+	const $split = new SplitText($defaultTitle, { type: "chars" });
+	const $split2 = new SplitText($revealTitle, { type: "chars" });
+
+	let gsapTl = gsap.timeline({ paused: true });
+	gsapTl.to($split.chars, {
+		y: "-100%",
+		opacity: 0,
+		duration: 0.3,
+		stagger: -0.02,
+		onComplete: function () {
+			$border.width($revealTitle.outerWidth());
+		},
+	});
+	gsapTl.from($split2.chars, {
+		y: "100%",
+		opacity: 0,
+		stagger: 0.02,
+	});
+
+	$($Title).on("mouseenter", function () {
+		gsapTl.play();
+	});
+	$($Title).on("mouseleave", function () {
+		gsapTl.reverse().eventCallback("onReverseComplete", function () {
+			$border.width($defaultTitle.outerWidth());
+		});
 	});
 });

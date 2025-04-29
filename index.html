@@ -182,7 +182,7 @@
 		<section id="home-hero" class="relative h-dvh">
 			<div
 				id="hero-play-reel"
-				class="absolute hidden text-sm font-medium text-white bg-portlandOrange px-5 py-9 rounded-full pointer-events-none scale-0 -translate-1/2 z-20 lg:block"
+				class="absolute hidden text-sm font-medium text-white bg-portlandOrange px-5 py-9 rounded-full pointer-events-none top-0 left-0 opacity-0 scale-0 -translate-1/2 z-20 lg:block"
 			>
 				play reel
 			</div>
@@ -788,10 +788,13 @@
 				id="know-us-title"
 				class="overflow-hidden inline-flex flex-col justify-end items-center font-light"
 			>
-				<h1 id="default-title" class="translate-y-full">
+				<h1
+					id="default-title"
+					class="translate-y-full whitespace-nowrap"
+				>
 					Get to know us
 				</h1>
-				<h1 id="reveal-title">About Us</h1>
+				<h1 id="reveal-title" class="whitespace-nowrap">About Us</h1>
 				<span
 					id="bottom-border"
 					class="absolute h-[3px] bg-black transition-all duration-300"
@@ -1125,9 +1128,10 @@
 				);
 			});
 
-			// Hero Cursor
+			// Hero Section
 			$(document).ready(function () {
-				const $heroSec = $("#hero-section");
+				// Hero Cursor
+				const $heroSec = $("#home-hero");
 				const $heroCursor = $("#hero-play-reel");
 				// Move Cursor
 				$heroSec.on("mouseenter", function () {
@@ -1150,10 +1154,8 @@
 						opacity: 0,
 					});
 				});
-			});
 
-			// Hero Reel
-			$(document).ready(function () {
+				// Hero Reel
 				const $fullReel = $("#hero-full-reel");
 				let gsapTl = gsap.timeline();
 				gsapTl.to($fullReel, {
@@ -1290,76 +1292,6 @@
 						trigger: "#agency-model-logos",
 						scrub: 2,
 					},
-				});
-			});
-
-			// Glance Slide Initilization
-			$(document).ready(function () {
-				var swiper = new Swiper(".workGlance", {
-					freeMode: true,
-					grabCursor: true,
-					loop: true,
-					speed: 7000,
-					spaceBetween: 30,
-					autoplay: {
-						delay: 0,
-						pauseOnMouseEnter: true,
-					},
-					breakpoints: {
-						0: {
-							slidesPerView: 1,
-						},
-						640: {
-							slidesPerView: 2,
-						},
-						1280: {
-							slidesPerView: 3,
-						},
-						1536: {
-							slidesPerView: 4,
-							spaceBetween: 40,
-						},
-					},
-				});
-			});
-
-			// Know Us Title
-			$(document).ready(function () {
-				const $knowUsTitle = $("#know-us-title");
-				const $defaultTitle = $("#default-title");
-				const $revealTitle = $("#reveal-title");
-				const $border = $("#bottom-border");
-				$knowUsTitle.width($defaultTitle.outerWidth());
-				$knowUsTitle.height($defaultTitle.outerHeight());
-				$border.width($defaultTitle.outerWidth());
-				const $split = new SplitText($defaultTitle, { type: "chars" });
-				const $split2 = new SplitText($revealTitle, { type: "chars" });
-
-				let gsapTl = gsap.timeline({ paused: true });
-				gsapTl.to($split.chars, {
-					y: "-100%",
-					opacity: 0,
-					duration: 0.3,
-					stagger: -0.02,
-					onComplete: function () {
-						$border.width($revealTitle.outerWidth());
-					},
-				});
-				gsapTl.from($split2.chars, {
-					y: "100%",
-					opacity: 0,
-					stagger: 0.02,
-				});
-
-				$($knowUsTitle).on("mouseenter", function () {
-					gsapTl.play();
-				});
-				$($knowUsTitle).on("mouseleave", function () {
-					gsapTl
-						.reverse()
-						.eventCallback("onReverseComplete", function () {
-							$border.width($defaultTitle.outerWidth());
-						});
 				});
 			});
 		</script>
