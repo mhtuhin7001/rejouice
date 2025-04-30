@@ -73,7 +73,7 @@ $(document).ready(function () {
 
 // First View Line Reveal Animation
 $(document).ready(function () {
-	["#about-title", "#work-title"].forEach((selector) => {
+	["#about-title", "#work-title", "#contact-title"].forEach((selector) => {
 		new SplitText(selector, {
 			type: "lines",
 			linesClass: "lineChild",
