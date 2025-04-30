@@ -2,22 +2,90 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Before Underline Example</title>
+		<title>Vertical Image Slider</title>
+		<script src="https://cdn.tailwindcss.com"></script>
 		<style>
-			.underline-before::before {
-				content: "";
-				display: block;
-				width: 100%;
-				height: 2px;
-				background-color: black;
-				margin-top: 5px; /* Adjust the space between text and underline */
+			.slide {
+				transition: transform 0.7s ease;
+			}
+			.slide.inactive {
+				transform: translateY(100%);
+			}
+			.slide.active {
+				transform: translateY(0);
+			}
+			.slide.prev {
+				transform: translateY(-100%);
 			}
 		</style>
 	</head>
-	<body>
-		<p class="underline-before">
-			This text has a custom underline using ::before.
-		</p>
+	<body class="overflow-hidden bg-black">
+		<div id="slider" class="relative h-screen w-screen overflow-hidden">
+			<div
+				class="absolute inset-0 slide active"
+				style="
+					background-image: url('asset/images/glance-1.avif');
+					background-size: cover;
+				"
+			></div>
+			<div
+				class="absolute inset-0 slide inactive"
+				style="
+					background-image: url('asset/images/glance-3.avif');
+					background-size: cover;
+				"
+			></div>
+			<div
+				class="absolute inset-0 slide inactive"
+				style="
+					background-image: url('asset/images/glance-1.avif');
+					background-size: cover;
+				"
+			></div>
+		</div>
+
+		<script>
+			const slides = document.querySelectorAll(".slide");
+			let current = 0;
+			let scrolling = false;
+
+			function changeSlide(direction) {
+				if (scrolling) return;
+				scrolling = true;
+
+				const prevSlide = slides[current];
+				if (direction === "down" && current < slides.length - 1) {
+					current++;
+					slides[current].classList.remove("inactive");
+					slides[current].classList.add("active");
+					prevSlide.classList.remove("active");
+					prevSlide.classList.add("prev");
+				} else if (direction === "up" && current > 0) {
+					slides[current].classList.remove("active");
+					slides[current].classList.add("inactive");
+					current--;
+					slides[current].classList.remove("prev");
+					slides[current].classList.add("active");
+				}
+
+				setTimeout(() => {
+					scrolling = false;
+				}, 700); // matches CSS transition time
+			}
+
+			window.addEventListener("wheel", (e) => {
+				if (e.deltaY > 0) {
+					changeSlide("down");
+				} else {
+					changeSlide("up");
+				}
+			});
+
+			// Optional: support for arrow keys
+			window.addEventListener("keydown", (e) => {
+				if (e.key === "ArrowDown") changeSlide("down");
+				if (e.key === "ArrowUp") changeSlide("up");
+			});
+		</script>
 	</body>
 </html>

@@ -9,6 +9,9 @@
 h1 {
 	@apply text-[clamp(1.5rem,calc(3vw+1rem),5.7rem)] leading-[clamp(2rem,calc(3vw+1.5rem),6.2rem)];
 }
+h2 {
+	@apply text-[clamp(1.2rem,calc(2.5vw+.5rem),4.5rem)] leading-[clamp(1.7rem,calc(2.5vw+1rem),5rem)];
+}
 h4 {
 	@apply text-[clamp(1rem,calc(1.5vw+0.5rem),2.75rem)];
 }
@@ -67,25 +70,35 @@ footer .menu-item {
 	@apply overflow-hidden max-w-max;
 }
 
-/* Agency Models */
+/* Hover Border Animation */
 #agency-models .lineChild {
 	text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white,
 		2px 2px 0 white;
 }
 #agency-models .lineChild::before,
-#agency-models .lineChild::after {
+#agency-models .lineChild::after,
+#works h2::before,
+#works h2::after {
 	@apply content-[""] absolute w-full  h-[3px] left-0 bg-black bottom-1 transition-all duration-600 ease-[cubic-bezier(0.16,1,0.3,1)] -z-10;
 }
-#agency-models .lineChild::before {
+#works h2::before,
+#works h2::after {
+	@apply invisible bg-white md:visible;
+}
+#agency-models .lineChild::before,
+#works h2::before {
 	@apply scale-x-100 origin-right delay-150;
 }
-#agency-models .lineChild::after {
+#agency-models .lineChild::after,
+#works h2::after {
 	@apply scale-x-0 origin-left;
 }
-#agency-models #models-title:hover ::before {
+#agency-models #models-title:hover ::before,
+#works h2:hover::before {
 	@apply scale-x-0 origin-right delay-0;
 }
-#agency-models #models-title:hover ::after {
+#agency-models #models-title:hover ::after,
+#works h2:hover::after {
 	@apply scale-x-100 origin-left delay-150;
 }
 

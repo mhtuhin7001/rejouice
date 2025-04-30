@@ -71,6 +71,31 @@ $(document).ready(function () {
 	});
 });
 
+// First View Line Reveal Animation
+$(document).ready(function () {
+	["#about-title", "#work-title"].forEach((selector) => {
+		new SplitText(selector, {
+			type: "lines",
+			linesClass: "lineChild",
+		});
+		new SplitText(selector, {
+			type: "lines",
+			linesClass: "lineParent",
+		});
+		gsap.fromTo(
+			`${selector} .lineChild`,
+			{ yPercent: 100, opacity: 0 },
+			{
+				yPercent: 0,
+				opacity: 1,
+				duration: 0.5,
+				stagger: 0.15,
+				ease: "power3.out",
+			}
+		);
+	});
+});
+
 // Line Reveal Animation
 $(document).ready(function () {
 	[
