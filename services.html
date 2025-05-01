@@ -3,14 +3,12 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>About | REJOUICE®</title>
+		<title>Work | REJOUICE®</title>
 		<link
 			rel="shortcut icon"
 			href="asset/favicon.png"
 			type="image/x-icon"
 		/>
-		<!-- Swiper Style -->
-		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
 		<!-- Main Style -->
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
@@ -91,10 +89,10 @@
 					<li class="menu-item">
 						<a href="work.html">Work</a>
 					</li>
-					<li class="menu-item current-menu-item">
+					<li class="menu-item">
 						<a href="about.html">About</a>
 					</li>
-					<li class="menu-item">
+					<li class="menu-item current-menu-item">
 						<a href="services.html">Services</a>
 					</li>
 					<li class="menu-item">
@@ -180,281 +178,269 @@
 
 		<!-- Hero -->
 		<section
-			id="about-hero"
+			id="services-hero"
 			class="font-light text-black bg-white p-(--sectionGap)"
 		>
 			<div class="flex items-center py-16 md:h-[80vh] md:py-0">
-				<h1 id="about-title">
-					We are a collective of seasoned creatives, strategists,
-					growth marketers, and technologists, dedicated to
-					transforming ambitious visions into high-performing brands.
+				<h1 id="services-title">
+					Undeniable transformation and growth. One mission. Two
+					engagement models.
 				</h1>
 			</div>
-			<div
-				class="flex justify-between py-3.5 border-t-1 border-t-[#00000055]"
-			>
-				<p class="basis-1/2">
-					We operate on <br />
-					simple principles
-				</p>
-				<div class="basis-1/2">
-					<ol class="list-decimal">
-						<li>Put people first</li>
-						<li>Pursue excellence</li>
-						<li>Embrace challenges</li>
-					</ol>
-					<p class="mt-4 lg:pr-[40%]">
-						These three principles have earned us numerous awards.
-						While we don’t chase accolades, they are proof of our
-						dedication to impact, quality, and innovation.
-					</p>
+			<div class="md:flex md:justify-between">
+				<div class="md:basis-1/3 md:flex items-end">
+					<h5 class="md:sticky md:bottom-0 md:pb-5">Capabilities</h5>
 				</div>
-			</div>
-		</section>
-
-		<!-- Awards -->
-		<section
-			id="awards"
-			class="font-light text-black bg-white p-(--sectionGap)"
-		>
-			<div>
-				<div class="relative flex items-end justify-end">
-					<h2
-						id="award-title"
-						class="overflow-hidden sm:mr-(--sectionGap)"
+				<div id="services" class="md:basis-2/3">
+					<div
+						id="services-list"
+						class="flex justify-between gap-2 pt-4 pb-(--sectionGap) border-t-1 border-t-[#00000055]"
 					>
-						Awards
-					</h2>
-					<h1 class="absolute -top-5 right-0">(70x)</h1>
-				</div>
-				<div
-					class="flex justify-between py-3.5 border-t-1 border-t-[#00000055]"
-				>
-					<p class="basis-1/2">Awards for digital innovation</p>
-					<p class="basis-1/2">
-						25 x Awwwards <br />
-						15 x FWA <br />
-						22 x CSS Design <br />
-						02 x Webby <br />
-						...and more.
-					</p>
+						<p class="basis-1/3">Strategy</p>
+						<ul class="basis-2/3">
+							<li>Brand Audit</li>
+							<li>Qualitative Research</li>
+							<li>Quantitative Research</li>
+							<li>Discovery Workshop</li>
+							<li>Competitive Analysis</li>
+							<li>Brand Storytelling</li>
+							<li>Positioning</li>
+							<li>Brand Architecture</li>
+							<li>Naming</li>
+							<li>Key Messaging</li>
+							<li>Voice & Tone</li>
+							<li>Content Strategy</li>
+							<li>Copywriting</li>
+						</ul>
+					</div>
+					<div
+						id="services-list"
+						class="flex justify-between gap-2 pt-4 pb-(--sectionGap) border-t-1 border-t-[#00000055]"
+					>
+						<p class="basis-1/3">Design</p>
+						<ul class="basis-2/3">
+							<li>Brand Identity</li>
+							<li>Brand Guidelines & Design</li>
+							<li>Systems</li>
+							<li>Art Direction</li>
+							<li>User Experience (UX)</li>
+							<li>User Interface (UI)</li>
+							<li>Wireframe & Prototyping</li>
+							<li>Product Design</li>
+							<li>Mobile App</li>
+							<li>Website, E-Commerce & App</li>
+							<li>Design</li>
+							<li>Motion Design</li>
+							<li>CGI & 3D</li>
+							<li>Content Creation</li>
+						</ul>
+					</div>
+					<div
+						id="services-list"
+						class="flex justify-between gap-2 pt-4 pb-(--sectionGap) border-t-1 border-t-[#00000055]"
+					>
+						<p class="basis-1/3">Development</p>
+						<ul class="basis-2/3">
+							<li>Creative Development</li>
+							<li>Technical Architecture</li>
+							<li>Headless eCommerce</li>
+							<li>Front-End Development</li>
+							<li>Back-End Development</li>
+							<li>Application Development</li>
+							<li>API s Integrations</li>
+							<li>Quality Assurance</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			<div class="flex justify-center items-center pb-(--sectionGap)">
-				<div id="approach-video" class="w-full h-dvh mt-(--sectionGap)">
+			<div class="flex justify-center items-center my-(--sectionGap)">
+				<div id="approach-video" class="w-full h-dvh">
 					<video
 						muted
 						autoplay
 						loop
-						src="asset/images/approach.mp4"
+						src="asset/images/services.mp4"
 						class="size-full object-cover"
 					></video>
 				</div>
 			</div>
-			<div class="py-(--sectionGap)">
-				<h1 id="attention-text">
-					Attention is earned, not given. Great work matters most when
-					it inspires action. We build brands that transform attention
-					into transactions by unlocking your brand's potential for
-					impact and growth.
-				</h1>
-			</div>
 		</section>
 
-		<!-- Founder -->
+		<!-- Clients -->
 		<section
-			id="founder"
-			class="font-light text-black bg-white p-(--sectionGap)"
-		>
-			<div class="md:flex md:justify-between">
-				<div class="basis-1/5 flex items-end">
-					<h5 class="md:sticky md:pb-5 md:bottom-0">Our Founder</h5>
-				</div>
-				<div class="mb-5 md:basis-1/3">
-					<img
-						src="asset/images/founder.avif"
-						class="size-full object-cover"
-						alt="Founder Image"
-					/>
-				</div>
-				<div class="md:basis-1/3">
-					<p id="founder-describe">
-						"We have streamlined the outdated and layered agency
-						model to give you direct access to some of the best
-						global talent. No wasted time, no empty promises. Just
-						impactful results."
-					</p>
-					<div class="my-5">
-						<h5>Guillaume Hamon</h5>
-						<h5 class="-mt-2 opacity-50">Founder & ECD</h5>
-					</div>
-					<div>
-						<a
-							href="#"
-							class="see-btn group relative flex items-center md:-translate-x-5"
-						>
-							<span
-								class="-translate-x-full translate-y-full opacity-0 transition-all duration-500 group-hover:translate-x-full group-hover:translate-y-0 group-hover:opacity-100"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									class="hidden size-5 md:block 2xl:size-7"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-									/>
-								</svg>
-							</span>
-							<span
-								class="transition-all duration-500 group-hover:translate-x-5"
-								>linkedin</span
-							>
-							<span
-								class="transition-all duration-500 group-hover:translate-x-full group-hover:-translate-y-full group-hover:opacity-0"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									class="size-5 2xl:size-7"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-									/>
-								</svg>
-							</span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- About Company -->
-		<section
-			id="about-company"
+			id="clients"
 			class="font-light text-white bg-black p-(--sectionGap)"
 		>
-			<div class="md:flex md:justify-between">
-				<div class="md:basis-1/2 md:flex md:items-end">
-					<h1 class="pb-6 md:sticky md:bottom-0">
-						Designed to <br />
-						transform
-					</h1>
+			<div>
+				<h1 id="clients-title" class="flex flex-col items-center">
+					Our Clients Say It Best. <br />
+					Want an Intro?
+				</h1>
+			</div>
+			<div
+				class="mx-(--sectionGap) p-(--sectionGap) md:grid md:grid-cols-2 md:gap-(--sectionGap)"
+			>
+				<div class="mt-8 md:mt-0">
+					<img
+						src="asset/images/client-1.avif"
+						class="max-size-full object-cover"
+						alt="Clients Image"
+					/>
+					<h5 class="mt-4 opacity-50">Abdul Ovaice</h5>
+					<h5 class="mb-4 opacity-50">
+						Creative Director at OURA RING
+					</h5>
+					<p class="md:pr-[30%]">
+						“They passionately drove OURA's brand strategy, and
+						instead of the usual dip after launching a new website,
+						it was the exact opposite. Numbers increased.”
+					</p>
 				</div>
-				<div class="md:basis-1/2">
-					<div class="mb-5">
-						<h5 class="md:pr-[35%]">One Team, Global Talent</h5>
-						<p class="mt-4 opacity-50 md:pr-[35%]">
-							We curate the best talent from all corners of the
-							world. This enables us to leverage diverse
-							perspectives, knowledge, and expertise to deliver
-							fresh and tailored solutions for our clients.
+				<div class="mt-8 md:mt-0">
+					<img
+						src="asset/images/client-2.avif"
+						class="max-size-full object-cover"
+						alt="Clients Image"
+					/>
+					<h5 class="mt-4 opacity-50">RJ Scaringe</h5>
+					<h5 class="mb-4 opacity-50">Founder & CEO at RIVIAN</h5>
+					<p class="md:pr-[30%]">
+						“Thrilled with the collaboration.”
+					</p>
+				</div>
+				<div class="mt-8 md:mt-0">
+					<img
+						src="asset/images/client-3.avif"
+						class="max-size-full object-cover"
+						alt="Clients Image"
+					/>
+					<h5 class="mt-4 opacity-50">Fleur Heyns</h5>
+					<h5 class="mb-4 opacity-50">Co-founder & CEO at PROOF</h5>
+					<p class="md:pr-[30%]">
+						“Rejouice helped us bring our vision of data-backed
+						storytelling to life in a novel, engaging and highly
+						memorable way.”
+					</p>
+				</div>
+				<div class="mt-8 md:mt-0">
+					<img
+						src="asset/images/client-4.avif"
+						class="max-size-full object-cover"
+						alt="Clients Image"
+					/>
+					<h5 class="mt-4 opacity-50">Alex Meek</h5>
+					<h5 class="mb-4 opacity-50">
+						Co-founder & President at MOXION POWER
+					</h5>
+					<p class="md:pr-[30%]">
+						“Great partnership. We proudly showcase the results
+						achieved together.”
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQs -->
+		<section
+			id="faqs"
+			class="font-light text-white bg-black p-(--sectionGap) md:flex md:justify-between"
+		>
+			<div class="md:basis-1/2 md:flex md:items-end">
+				<h4 class="pb-3 md:sticky md:pb-6 md:bottom-0">
+					Questions? <br />
+					We're glad you asked.
+				</h4>
+			</div>
+			<div id="faqs-list" class="md:basis-1/2">
+				<div
+					id="faqs-qus-ans"
+					class="pt-4 pb-(--sectionGap) border-t-1 border-t-[#ffffff33] md:flex md:justify-between"
+				>
+					<div class="md:basis-4/5">
+						<p class="md:mr-[30%]">
+							What is the contract preparation timeframe for your
+							Venture model engagement?
+						</p>
+						<p class="mt-4 opacity-50 md:mr-[30%]">
+							It is the same timeframe as a traditional service
+							agreement. If you are ready to go we can sign
+							everything within a week.
 						</p>
 					</div>
-					<div class="mb-5">
-						<h5 class="md:pr-[35%]">Strategic Simplicity</h5>
-						<p class="mt-4 opacity-50 md:pr-[35%]">
-							For us, simplicity is the ultimate sophistication.
-							Our best work emerges from tackling complexity
-							head-on and distilling it collaboratively with
-							partners who value strategy, precision, and the time
-							needed to build a performing brand.
+				</div>
+				<div
+					id="faqs-qus-ans"
+					class="pt-4 pb-(--sectionGap) border-t-1 border-t-[#ffffff33] md:flex md:justify-between"
+				>
+					<div class="md:basis-4/5">
+						<p class="md:mr-[30%]">
+							Will there be a variation in the quality of
+							deliverables between the classic and venture models?
+						</p>
+						<p class="mt-4 opacity-50 md:mr-[30%]">
+							Nope, high-quality is all we deliver.
 						</p>
 					</div>
-					<div class="mb-5">
-						<h5 class="md:pr-[35%]">
-							We partner like your co-founders. Straight talk, no
-							sugarcoating. This is how we exceed expectations,
-							and deliver memorable brands.
-						</h5>
+				</div>
+				<div
+					id="faqs-qus-ans"
+					class="pt-4 pb-(--sectionGap) border-t-1 border-t-[#ffffff33] md:flex md:justify-between"
+				>
+					<div class="md:basis-4/5">
+						<p class="md:mr-[30%]">
+							What is the cost and timeframe of working with
+							Rejouice?
+						</p>
+						<p class="mt-4 opacity-50 md:mr-[30%]">
+							Let's talk about the details of your project to
+							estimate the associated timeline.
+						</p>
+					</div>
+				</div>
+				<div
+					id="faqs-qus-ans"
+					class="pt-4 pb-(--sectionGap) border-t-1 border-t-[#ffffff33] md:flex md:justify-between"
+				>
+					<div class="md:basis-4/5">
+						<p class="md:mr-[30%]">
+							How does Rejouice structure hybrid deals?
+						</p>
+						<p class="mt-4 opacity-50 md:mr-[30%]">
+							After initial scoping conversations, we will provide
+							a preliminary pricing in USD. Upon completion of due
+							diligence, we will present an updated pricing
+							framework that ties in equity and reduces your cash
+							component by up to 50%.
+						</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Experts -->
-		<section id="experts" class="font-light text-white bg-black pt-[20vw]">
-			<div>
-				<h1
-					id="experts-title"
-					class="flex flex-col items-center mx-(--sectionGap) pb-12 border-b-1 border-b-[#ffffff33]"
-				>
-					We match your project <br />
-					with the right experts
-				</h1>
-				<div class="swiper experts mt-6">
-					<div class="swiper-wrapper ease-linear!">
-						<div class="swiper-slide">
-							<img
-								src="asset/images/expert-1.avif"
-								class="size-full object-cover"
-								alt="Expert Image"
-							/>
-						</div>
-						<div class="swiper-slide">
-							<img
-								src="asset/images/expert-2.avif"
-								class="size-full object-cover"
-								alt="Expert Image"
-							/>
-						</div>
-						<div class="swiper-slide">
-							<img
-								src="asset/images/expert-3.avif"
-								class="size-full object-cover"
-								alt="Expert Image"
-							/>
-						</div>
-						<div class="swiper-slide">
-							<img
-								src="asset/images/expert-4.avif"
-								class="size-full object-cover"
-								alt="Expert Image"
-							/>
-						</div>
-						<div class="swiper-slide">
-							<img
-								src="asset/images/expert-5.avif"
-								class="size-full object-cover"
-								alt="Expert Image"
-							/>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div
-				class="h-dvh flex justify-center items-center p-(--sectionGap)"
+		<!-- Get Touch -->
+		<section
+			id="get-touch"
+			class="h-dvh font-light text-black bg-white flex justify-center items-center p-(--sectionGap)"
+		>
+			<a
+				href="mailto:hello@rejouice.com"
+				id="join-title"
+				class="overflow-hidden inline-flex flex-col justify-end items-center font-light"
 			>
-				<a
-					href="mailto:jobs@rejouice.com"
-					id="join-title"
-					class="overflow-hidden inline-flex flex-col justify-end items-center font-light"
+				<h1
+					id="default-title"
+					class="translate-y-full whitespace-nowrap"
 				>
-					<h1
-						id="default-title"
-						class="translate-y-full whitespace-nowrap"
-					>
-						jobs@rejouice.com
-					</h1>
-					<h1 id="reveal-title" class="whitespace-nowrap">
-						Join our Team
-					</h1>
-					<span
-						id="bottom-border"
-						class="absolute h-[3px] bg-white transition-all duration-300"
-					></span>
-				</a>
-			</div>
+					hello@rejouice.com
+				</h1>
+				<h1 id="reveal-title" class="whitespace-nowrap">
+					Get in Touch
+				</h1>
+				<span
+					id="bottom-border"
+					class="absolute h-[3px] bg-black transition-all duration-300"
+				></span>
+			</a>
 		</section>
 
 		<!-- Footer -->
@@ -747,8 +733,6 @@
 
 		<!-- JQuery Script -->
 		<script src="js/jquery-3.7.1.min.js"></script>
-		<!-- Swiper Script -->
-		<script src="js/swiper-bundle.min.js"></script>
 		<!-- Lenis Script -->
 		<script src="js/lenis.min.js"></script>
 		<!-- GSAP Script -->
@@ -759,22 +743,5 @@
 		<script src="js/SplitText.min.js"></script>
 		<!-- Main Script -->
 		<script src="js/script.js"></script>
-
-		<script>
-			// Award Title
-			$(document).ready(function () {
-				const split = new SplitText("#award-title", { type: "chars" });
-				gsap.from(split.chars, {
-					y: "100%",
-					opacity: 0,
-					duration: 0.5,
-					stagger: 0.05,
-					scrollTrigger: {
-						trigger: "#award-title",
-						start: "top 60%",
-					},
-				});
-			});
-		</script>
 	</body>
 </html>

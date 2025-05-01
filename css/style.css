@@ -13,13 +13,14 @@ h2 {
 	@apply text-[clamp(1.2rem,calc(2.5vw+.5rem),4.5rem)] leading-[clamp(1.7rem,calc(2.5vw+1rem),5rem)];
 }
 h4 {
-	@apply text-[clamp(1rem,calc(1.5vw+0.5rem),2.75rem)];
+	@apply text-[clamp(1rem,calc(1.5vw+0.5rem),2.75rem)] leading-[clamp(1.25rem,calc(1.75vw+0.5rem),3rem)];
 }
 h5,
 header a,
 .see-btn,
 #awards p,
-#about-company p {
+#about-company p,
+#services-hero ul li {
 	@apply text-[clamp(1rem,calc(1vw+0.5rem),2rem)];
 }
 h6,
@@ -27,6 +28,9 @@ p,
 li,
 label {
 	@apply text-[clamp(.9rem,calc(1vw+0.20rem),1.5rem)];
+}
+h2#award-title {
+	@apply text-[min(calc(20vw+1rem),33rem)] leading-[min(calc(28vw+1rem),40rem)];
 }
 
 /* Lenis */
@@ -100,6 +104,24 @@ footer .menu-item {
 #agency-models #models-title:hover ::after,
 #works h2:hover::after {
 	@apply scale-x-100 origin-left delay-150;
+}
+
+/* Work Hero */
+#services-hero #services {
+	counter-reset: serviceslist;
+}
+#services-hero #services-list::before {
+	content: "(0" counter(serviceslist) ")";
+	counter-increment: serviceslist;
+}
+
+/* FAQs */
+#faqs #faqs-list {
+	counter-reset: faqslist;
+}
+#faqs #faqs-list #faqs-qus-ans::before {
+	content: "(0" counter(faqslist) ")";
+	counter-increment: faqslist;
 }
 
 /** Fonts **/
